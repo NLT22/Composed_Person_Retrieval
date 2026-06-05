@@ -17,7 +17,7 @@ Phần này cố tình vẽ theo bố cục của hai hình trong paper:
 
 ### Sơ đồ A: CoPE đưa vào FAFA
 
-Đây là kiểu "FAFA làm backbone chính, CoPE làm nhánh uncertainty phụ". Hình này bám theo FAFA ở phần Q-Former/FDA, rồi gắn thêm phần uncertainty giống CoPE ở bên phải.
+Đây không nên hiểu là "bê nguyên CoPE loss vào FAFA". Bản đúng đắn hơn là: FAFA vẫn làm backbone chính, nhưng uncertainty của CoPE phải tác động trực tiếp vào **token selection**, **Top-K alignment score**, và **loss weighting** của FAFA. Nếu uncertainty chỉ được thêm như một loss phụ bên cạnh `L_fda`, nó yếu và không giải quyết điểm đau cụ thể nào.
 
 ![Sơ đồ A: CoPE đưa vào FAFA](mermaid_exports/01_cope_into_fafa_paper_like.png)
 
@@ -38,66 +38,81 @@ flowchart LR
         Ft["Fine-grained target tokens<br/>f_t(1)...f_t(N)"]
     end
 
-    subgraph ALIGN["FAFA fine-grained alignment"]
-        TOPK["Top-K cosine pooling"]
-        FDA["Fine-grained Dynamic Alignment<br/>L_fda"]
+    subgraph UQ["CoPE uncertainty adapted to Q-Former tokens"]
+        Uq["Query uncertainty head<br/>on Q-Former tokens"]
+        Ut["Target token uncertainty head<br/>on f_t(j) tokens"]
+        Sq["sigma_q"]
+        St["sigma_t(1)...sigma_t(N)"]
+        ND["Q-Former neighborhood deviation<br/>L_ND^Q"]
+    end
+
+    subgraph ALIGN["Uncertainty-aware FAFA alignment"]
+        REL["Reliability score<br/>r_j = exp(-u_j)"]
+        TOPK["Uncertainty-aware Top-K<br/>on s_j^U"]
+        FDA["Uncertainty-aware FDA<br/>L_fda^U"]
         FD["Feature Diversity<br/>L_fd"]
         MFR["Masked Feature Reasoning<br/>L_mfr"]
     end
 
-    subgraph COPE["CoPE uncertainty head added to FAFA"]
-        Uq["Uncertainty pooler<br/>on query Q-Former tokens"]
-        Uc["Uncertainty pooler<br/>on target Q-Former tokens"]
-        Sq["sigma_q"]
-        Sc["sigma_c"]
+    subgraph INST["Optional instance-level CoPE regularizer"]
         Muc["mean(f_t) = mu_c"]
-        LC["Probabilistic loss<br/>L_C"]
+        LC["Instance probabilistic loss<br/>L_C, small weight only"]
     end
 
     subgraph OUT["Training objective"]
-        L1["L = L_fda + lambda_1 L_fd + lambda_2 L_mfr<br/>+ beta L_C"]
+        L1["L = L_fda^U + lambda_1 L_fd + lambda_2 L_mfr<br/>+ gamma L_ND^Q + beta L_C"]
     end
 
     Iq --> V1 --> Q1
     Tq --> Q1 --> Fq
     It --> V2 --> Q2 --> Ft
 
+    Q1 --> Uq --> Sq
+    Ft --> Ut --> St
+    Fq --> ND
+    Ft --> ND
+
+    Sq --> REL
+    St --> REL
     Fq --> TOPK
-    Ft --> TOPK --> FDA
+    Ft --> TOPK
+    REL --> TOPK --> FDA
     Ft --> FD
     Fq --> MFR
     Ft --> MFR
 
-    Q1 --> Uq --> Sq
-    Q2 --> Uc --> Sc
     Ft --> Muc
     Fq --> LC
     Sq --> LC
     Muc --> LC
-    Sc --> LC
+    St --> LC
 
     FDA --> L1
     FD --> L1
     MFR --> L1
+    ND --> L1
     LC --> L1
 
     classDef input fill:#fff2cc,stroke:#d6a100,color:#111;
     classDef fafa fill:#dceeff,stroke:#3b82f6,color:#111;
+    classDef uncertainty fill:#fee2e2,stroke:#dc2626,color:#111;
     classDef align fill:#e7f6df,stroke:#60a533,color:#111;
     classDef cope fill:#fde2e2,stroke:#dc2626,color:#111;
     classDef loss fill:#f3e8ff,stroke:#7c3aed,color:#111;
     class Iq,Tq,It input;
     class V1,V2,Q1,Q2,Fq,Ft fafa;
-    class TOPK,FDA,FD,MFR align;
-    class Uq,Uc,Sq,Sc,Muc,LC cope;
+    class Uq,Ut,Sq,St,ND uncertainty;
+    class REL,TOPK,FDA,FD,MFR align;
+    class Muc,LC cope;
     class L1 loss;
 ```
 
 Đọc hình này như sau:
 
 - Đường chính vẫn là FAFA: `I_q + T_q -> Q-Former -> f_q`, `I_t -> Q-Former -> f_t`, rồi tính `Sim(f_q, f_t)` bằng Top-K local alignment.
-- CoPE chỉ được gắn thêm như nhánh phụ: từ Q-Former tokens suy ra `sigma_q, sigma_c`, rồi thêm `L_C`.
-- Nếu chỉ làm vậy, đây là regularizer uncertainty, chưa phải một architecture CoPE-FAFA thật sự mạnh.
+- CoPE không chỉ là nhánh phụ. Nó tạo `sigma_q` và `sigma_t(j)` để biết query/token nào đáng tin.
+- FDA không còn chọn Top-K chỉ theo cosine, mà chọn theo score đã hiệu chỉnh bởi uncertainty.
+- `L_C` nếu dùng thì chỉ nên là regularizer nhỏ ở mức instance. Phần chính phải là `L_fda^U`, tức uncertainty-aware FDA.
 
 ### Sơ đồ B: FAFA đưa vào CoPE
 
@@ -283,7 +298,23 @@ Theo FAFA:
 
 ## Hướng 1: Đưa CoPE vào FAFA
 
-Ý tưởng: giữ kiến trúc FAFA làm backbone chính, sau đó thêm đầu uncertainty kiểu CoPE lên các token của Q-Former. Đây chính là kiểu mà thư mục `FAFA_SynCPR-20260508T090947Z-3-001` từng làm dang dở.
+Ý tưởng đúng đắn hơn: giữ FAFA làm backbone chính, nhưng đưa uncertainty của CoPE vào đúng chỗ FAFA dễ sai nhất: **chọn local token nào để align**.
+
+FAFA dùng Top-K trên các token `f_t(j)`. Cơ chế này mạnh vì bắt được chi tiết nhỏ, nhưng cũng có điểm yếu: nếu một token target có cosine cao do nhiễu, background, pose, hoặc caption mơ hồ, Top-K có thể kéo score lên sai. CoPE có ý nghĩa ở đây nếu nó học được độ không chắc chắn của query/token và làm cho FDA bớt overconfident.
+
+Vì vậy, hướng này không nên là:
+
+```text
+L = L_fda + lambda_1 L_fd + lambda_2 L_mfr + beta L_C
+```
+
+với `L_C` treo bên cạnh. Công thức đó chỉ là bản dễ làm, nhưng yếu về mặt nghiên cứu.
+
+Hướng nên làm là:
+
+```text
+FAFA + CoPE = Uncertainty-aware Fine-grained Dynamic Alignment
+```
 
 ```mermaid
 flowchart LR
@@ -291,22 +322,23 @@ flowchart LR
     T["Relative caption T_q / x_t"] --> QF["Q-Former fusion"]
     Vq --> QF
 
-    QF --> FQ["Query feature f_q = mu_q"]
+    QF --> FQ["Query feature f_q"]
     QF --> QTOK["Q-Former query tokens"]
-    QTOK --> UQ["CoPE-style uncertainty pooler"]
+    QTOK --> UQ["Query uncertainty head"]
     UQ --> SQ["sigma_q"]
 
     C["Target image I_t / x_c"] --> Vt["FAFA frozen image encoder"]
     Vt --> TQF["Q-Former target branch"]
     TQF --> FT["Target fine-grained features f_t"]
-    FT --> FTMEAN["mean pool f_t = mu_c"]
-    TQF --> CTOK["Target Q-Former tokens"]
-    CTOK --> UC["CoPE-style uncertainty pooler"]
-    UC --> SC["sigma_c"]
+    FT --> UT["Token uncertainty head"]
+    UT --> ST["sigma_t(1)...sigma_t(N)"]
 
-    FQ --> FDA["FDA Top-K alignment Sim(f_q, f_t)"]
-    FT --> FDA
-    FDA --> LFDA["L_fda"]
+    FQ --> SCORE["Uncertainty-aware token scores s_j^U"]
+    FT --> SCORE
+    SQ --> SCORE
+    ST --> SCORE
+    SCORE --> TOPK["Reliable Top-K token pooling"]
+    TOPK --> LFDA["L_fda^U"]
 
     FT --> FD["Feature diversity"]
     FD --> LFD["L_fd"]
@@ -315,15 +347,15 @@ flowchart LR
     FT --> MFR
     MFR --> LMFR["L_mfr"]
 
-    FQ --> LC["CoPE probabilistic loss L_C"]
-    SQ --> LC
-    FTMEAN --> LC
-    SC --> LC
+    FQ --> ND["Q-Former neighborhood deviation L_ND^Q"]
+    FT --> ND
+    SQ --> ND
+    ST --> ND
 
     LFDA --> LT["Total loss"]
     LFD --> LT
     LMFR --> LT
-    LC --> LT
+    ND --> LT
 ```
 
 Similarity chính của FAFA:
@@ -364,46 +396,89 @@ L_mfr =
 L_FAFA = L_fda + lambda_1 * L_fd + lambda_2 * L_mfr
 ```
 
-Thêm CoPE vào FAFA:
+Thiết kế CoPE vào FAFA nên sửa score local trước. Gọi:
 
 ```text
-z_q = (mu_q, sigma_q) = (f_q, sigma_q)
-z_c = (mu_c, sigma_c) = (mean(f_t), sigma_c)
+mu_q = f_q
+mu_tj = f_t(j)
 
-d(z_q, z_c) =
-  ||mu_q - mu_c||_2^2
-  + ||sigma_q - sigma_c||_2^2
-  + 2D * mean(sigma_q) * mean(sigma_c)
-
-L_FAFA+CoPE =
-  L_fda
-  + lambda_1 * L_fd
-  + lambda_2 * L_mfr
-  + beta * L_C
+sigma_q  = uncertainty của query
+sigma_tj = uncertainty của target token j
+u_j = mean(sigma_q) + mean(sigma_tj)
 ```
 
-Nếu muốn làm chặt hơn, có thể thêm feature-wise uncertainty kiểu CoPE:
+Thay vì dùng cosine thô:
 
 ```text
-L_FAFA+CoPE+ND =
-  L_fda
-  + lambda_1 * L_fd
-  + lambda_2 * L_mfr
-  + beta * L_C
-  + gamma * L_ND^QFormer
+s_j = cos(f_q, f_t(j))
 ```
 
-Trong đó `L_ND^QFormer` không lấy neighbor trên CLIP vector như CoPE gốc, mà lấy neighbor trên `f_q` hoặc `mean(f_t)` của FAFA.
+dùng score có xét độ tin cậy:
+
+```text
+s_j^U = cos(f_q, f_t(j)) - alpha_u * u_j
+```
+
+hoặc dạng probabilistic distance chặt hơn:
+
+```text
+d_j^U =
+  ||mu_q - mu_tj||_2^2 / (sigma_q^2 + sigma_tj^2 + eps)
+  + log(sigma_q^2 + sigma_tj^2 + eps)
+
+s_j^U = -d_j^U
+```
+
+Sau đó FDA dùng Top-K trên `s_j^U`:
+
+```text
+TopK_U = TopK({s_j^U}_{j=1}^{N})
+
+w_j = softmax(-u_j / tau_u), với j thuộc TopK_U
+
+Sim_U(f_q, f_t) =
+  sum_{j thuộc TopK_U} w_j * cos(f_q, f_t(j))
+```
+
+Loss chính:
+
+```text
+L_fda^U =
+  KL(softmax(Sim_U / tau) || q)
+  + reverse direction nếu training bidirectional
+```
+
+Regularizer uncertainty cần có, nếu không `sigma` rất dễ thành hằng số vô nghĩa:
+
+```text
+L_ND^Q =
+  || sigma_q - deviation(N_q) ||_2^2
+  + mean_j || sigma_tj - deviation(N_tj) ||_2^2
+```
+
+Objective đề xuất:
+
+```text
+L_FAFA+CoPE-correct =
+  L_fda^U
+  + lambda_1 * L_fd
+  + lambda_2 * L_mfr
+  + gamma * L_ND^Q
+  + beta * L_C_instance
+```
+
+Trong đó `beta` nên nhỏ. `L_C_instance` chỉ là phụ, ví dụ dùng `(f_q, sigma_q)` và `(mean(f_t), mean_j sigma_tj)` để giữ tương thích với tinh thần CoPE. Nếu bỏ `L_C_instance` vẫn được; phần đáng nghiên cứu là `L_fda^U + L_ND^Q`.
 
 Đánh giá trung thực:
 
-- Ưu điểm: dễ triển khai nhất vì FAFA đã có Q-Former token, còn uncertainty head của CoPE có thể gắn vào token này khá tự nhiên.
-- Ưu điểm: hợp lý nếu đích cuối là SynCPR / ITCPR vì FAFA vốn sinh ra cho composed person retrieval.
-- Nhược điểm: đây không thật sự là "CoPE đầy đủ vào FAFA", vì không dùng backbone CLIP và không giữ nguyên pipeline CoPE.
-- Nhược điểm lớn: nếu chỉ thêm `L_C` như auxiliary loss, khả năng cải thiện nhỏ hoặc không ổn định. Nó giống regularizer hơn là một module truy hồi mới.
+- Ưu điểm: câu chuyện hợp lý hơn: CoPE giúp FAFA biết token nào không chắc, thay vì ép mọi Top-K token có giá trị như nhau.
+- Ưu điểm: bám đúng hình FAFA vì vẫn giữ Q-Former, `f_q`, `f_t`, FDA, MFR.
+- Ưu điểm: bám đúng tinh thần CoPE vì uncertainty không chỉ để báo cáo, mà đi vào scoring và loss.
+- Nhược điểm: phải train uncertainty thật. Nếu `sigma` bị hằng số, hướng này coi như thất bại.
+- Nhược điểm: cần cẩn thận để uncertainty không trở thành đường tắt làm giảm loss bằng cách phạt mọi token khó.
 - Nhược điểm cho FashionIQ: FAFA là person-centric, còn FashionIQ là product-centric. Không có ID/GID rõ như SynCPR nên `L_fda` phải sửa.
 
-Kết luận cho hướng này: đáng làm nếu mục tiêu là SynCPR/ITCPR. Không nên chọn làm hướng đầu tiên nếu mục tiêu là chứng minh cải thiện trên FashionIQ.
+Kết luận cho hướng này: nếu nói "CoPE vào FAFA" cho đúng nghĩa, nên làm uncertainty-aware FDA như trên. Bản chỉ thêm `CoPELoss` vào FAFA là baseline kỹ thuật, không phải hướng nghiên cứu tốt.
 
 ## Hướng 2: Đưa FAFA vào CoPE
 
