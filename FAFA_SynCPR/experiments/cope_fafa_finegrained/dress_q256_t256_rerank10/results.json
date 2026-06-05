@@ -1,0 +1,343 @@
+{
+  "settings": {
+    "config": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/config_fiq_paper.yaml",
+    "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+    "data_path": "ACL25-CoPE/fashionIQ_dataset",
+    "category": "dress",
+    "output_dir": "Composed_Person_Retrieval/FAFA_SynCPR/experiments/cope_fafa_finegrained/dress_q256_t256_rerank10",
+    "device": "cuda:0",
+    "batch_size": 8,
+    "num_workers": 4,
+    "max_queries": 256,
+    "max_targets": 256,
+    "fda_k": 6,
+    "score_chunk": 128,
+    "rerank_topk": 10,
+    "alphas": "0,0.05,0.1,0.2,0.3,0.5,0.75,1,1.5,2",
+    "local_files_only": false
+  },
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+  "num_targets": 256,
+  "baseline": {
+    "num_queries": 256,
+    "R10": 78.90625,
+    "R50": 93.75,
+    "mean_rank": 11.18359375
+  },
+  "baseline_eval": {
+    "num_queries": 128,
+    "R10": 75.78125,
+    "R50": 92.96875,
+    "mean_rank": 11.8515625
+  },
+  "best_alpha": 0.05,
+  "best_fda": {
+    "alpha": 0.05,
+    "dev_R10": 82.03125,
+    "dev_R50": 94.53125,
+    "dev_mean_rank": 10.390625,
+    "eval_R10": 75.78125,
+    "eval_R50": 92.96875,
+    "eval_mean_rank": 11.8671875
+  },
+  "all_fda": {
+    "num_queries": 256,
+    "R10": 78.90625,
+    "R50": 93.75,
+    "mean_rank": 11.12890625
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.0,
+      "dev_R10": 82.03125,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.515625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8515625
+    },
+    {
+      "alpha": 0.05,
+      "dev_R10": 82.03125,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.390625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8671875
+    },
+    {
+      "alpha": 0.1,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.390625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.84375
+    },
+    {
+      "alpha": 0.2,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.4140625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8671875
+    },
+    {
+      "alpha": 0.3,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.40625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8984375
+    },
+    {
+      "alpha": 0.5,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.5625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.9453125
+    },
+    {
+      "alpha": 0.75,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.0546875
+    },
+    {
+      "alpha": 1.0,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.71875,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.1328125
+    },
+    {
+      "alpha": 1.5,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.828125,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.2421875
+    },
+    {
+      "alpha": 2.0,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.9921875,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.25
+    }
+  ],
+  "rank_changes": [
+    {
+      "ref": "B005FLWZCA",
+      "target": "B0087PLHB6",
+      "text": "Is a lighter color and is solid white",
+      "baseline_rank": 9,
+      "fda_rank": 6,
+      "rank_delta": 3
+    },
+    {
+      "ref": "B00CW6HT7W",
+      "target": "B00DVH1QS4",
+      "text": "Is off the shoulder with one shorter sleeve and has longer sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 6,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B009CMY4BS",
+      "target": "B0091PLEKA",
+      "text": "Is gold and strapless and button front longer sleeves",
+      "baseline_rank": 5,
+      "fda_rank": 4,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00F4WI9H0",
+      "target": "B0077SM1Z0",
+      "text": "Is longer and more elegant and is longer and sleeveless",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B008UEW5RO",
+      "target": "B00AIBYV1K",
+      "text": "Is more transparent and is more solid colored",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007G6BODI",
+      "target": "B008PZ0Y62",
+      "text": "Is darker and shorter in length and is sleeveless",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0080N9HNU",
+      "target": "B006ZO5GC2",
+      "text": "Is shorter and has animal print and the dress has cheetah print and more revealing",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AOJVGYQ",
+      "target": "B00AAOD3LO",
+      "text": "Is brighter in color and is a light floral pattern",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00A7N4DC6",
+      "target": "B00B5VXRTO",
+      "text": "Is a short dress with a v neck and is a tan coloring with fabric overlapping on top",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0066NI17E",
+      "target": "B00DC0XN0O",
+      "text": "Is longer and has more pink and is pink with sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007FKA7E2",
+      "target": "B0029XKWKO",
+      "text": "Plain black and sleeveless and is darker in color and solid colored",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008596XXG",
+      "target": "B0094GWN38",
+      "text": "Is white and less revealing and is white and same length all around bottom",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008LTJG3E",
+      "target": "B00D4JNBC8",
+      "text": "Has a brighter color and is more of a boot with shorter heels and is a shoe",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00AWKKHOC",
+      "target": "B0091GR192",
+      "text": "Is lighter and orange and sleeveless",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008E7IA12",
+      "target": "B00BGK4I3S",
+      "text": "Is green pattern and lightly pleated and has a floral print that is harder to see",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00FP87XX4",
+      "target": "B009IE33SU",
+      "text": "Is orange and has longer sleeves and is orange and has longer sleeves",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00EOW7882",
+      "target": "B00D61ZCGW",
+      "text": "Is more revealing and longer and It is longer and has no sleeves",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B006361ONM",
+      "target": "B00DCCJBKS",
+      "text": "Is black in color and sexy dress and is black and more fitted",
+      "baseline_rank": 6,
+      "fda_rank": 7,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B007PPHY70",
+      "target": "B00662GT3I",
+      "text": "Is more colorful and looser and mover chest coverage and wider skirt",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00967AMPG",
+      "target": "B0097JITVM",
+      "text": "Is more princess like and is a lot shorter and pure white with straps",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00BIJGMD6",
+      "target": "B00CCC0B1C",
+      "text": "Has more polka dots and is darker with polka dots",
+      "baseline_rank": 2,
+      "fda_rank": 3,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B008PG0SOO",
+      "target": "B00CB2N8FY",
+      "text": "Has long sleeves and is black and Has long sleeves and is shorter",
+      "baseline_rank": 1,
+      "fda_rank": 2,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B004MMFVQ0",
+      "target": "B004ECLRO8",
+      "text": "Is more metallic with a tighter fit and is a fitted grey and black mini dress with pockets",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B004VM5W1K",
+      "target": "B004VERF8Q",
+      "text": "Is black and strapless and does not cover shoulders",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B007WA3RBK",
+      "target": "B008BHSSMG",
+      "text": "Has more print work and is pink and less strappy",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    }
+  ]
+}

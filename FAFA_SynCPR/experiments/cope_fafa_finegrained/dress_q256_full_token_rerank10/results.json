@@ -1,0 +1,371 @@
+{
+  "settings": {
+    "config": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/config_fiq_paper.yaml",
+    "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+    "data_path": "ACL25-CoPE/fashionIQ_dataset",
+    "category": "dress",
+    "output_dir": "Composed_Person_Retrieval/FAFA_SynCPR/experiments/cope_fafa_finegrained/dress_q256_full_token_rerank10",
+    "device": "cuda:0",
+    "batch_size": 16,
+    "num_workers": 8,
+    "max_queries": 256,
+    "max_targets": 0,
+    "fda_k": 6,
+    "query_k": 8,
+    "fda_mode": "tokens",
+    "score_chunk": 256,
+    "query_score_chunk": 4,
+    "target_score_chunk": 16,
+    "rerank_topk": 10,
+    "alphas": "0,0.05,0.1,0.2,0.3,0.5,0.75,1,1.5,2",
+    "local_files_only": false
+  },
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+  "num_targets": 3817,
+  "baseline": {
+    "num_queries": 256,
+    "R10": 36.71875,
+    "R50": 63.671875,
+    "mean_rank": 151.8046875
+  },
+  "baseline_eval": {
+    "num_queries": 128,
+    "R10": 33.59375,
+    "R50": 61.71875,
+    "mean_rank": 160.703125
+  },
+  "best_alpha": 0.1,
+  "best_fda": {
+    "alpha": 0.1,
+    "dev_R10": 39.84375,
+    "dev_R50": 65.625,
+    "dev_mean_rank": 142.8671875,
+    "eval_R10": 33.59375,
+    "eval_R50": 61.71875,
+    "eval_mean_rank": 160.71875
+  },
+  "all_fda": {
+    "num_queries": 256,
+    "R10": 36.71875,
+    "R50": 63.671875,
+    "mean_rank": 151.79296875
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.90625,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.703125
+    },
+    {
+      "alpha": 0.05,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.890625,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.7109375
+    },
+    {
+      "alpha": 0.1,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.8671875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.71875
+    },
+    {
+      "alpha": 0.2,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.8984375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6796875
+    },
+    {
+      "alpha": 0.3,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.9609375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.71875
+    },
+    {
+      "alpha": 0.5,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.015625,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.71875
+    },
+    {
+      "alpha": 0.75,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.046875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.75
+    },
+    {
+      "alpha": 1.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.0234375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.7578125
+    },
+    {
+      "alpha": 1.5,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.078125,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.7734375
+    },
+    {
+      "alpha": 2.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.1171875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.7734375
+    }
+  ],
+  "rank_changes": [
+    {
+      "ref": "B00G6TRZE8",
+      "target": "B003ZJ6GCO",
+      "text": "A low cut black gown and is in solid black and a lot longer",
+      "baseline_rank": 10,
+      "fda_rank": 5,
+      "rank_delta": 5
+    },
+    {
+      "ref": "B002OEYH3Q",
+      "target": "B008YIGWOS",
+      "text": "Has long sleeves and patterned and is in brownish coloring",
+      "baseline_rank": 2,
+      "fda_rank": 7,
+      "rank_delta": -5
+    },
+    {
+      "ref": "B003M4Z9OS",
+      "target": "B009XHND2I",
+      "text": "Patterned dress with zig zags and chevron patern",
+      "baseline_rank": 2,
+      "fda_rank": 6,
+      "rank_delta": -4
+    },
+    {
+      "ref": "B001HK23KM",
+      "target": "B002TKJL40",
+      "text": "And black and the shoulder straps more resemble a crop top",
+      "baseline_rank": 5,
+      "fda_rank": 8,
+      "rank_delta": -3
+    },
+    {
+      "ref": "B00BFGBJ3K",
+      "target": "B006ZKN7UY",
+      "text": "Is white in color with short sleeves and is more plain",
+      "baseline_rank": 5,
+      "fda_rank": 3,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B008OKGFF2",
+      "target": "B00ETGEI1I",
+      "text": "Is longer sleeved with black skirt and is long sleeve and darker pattern with black skirt",
+      "baseline_rank": 2,
+      "fda_rank": 4,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B00EOW7882",
+      "target": "B00D61ZCGW",
+      "text": "Is more revealing and longer and It is longer and has no sleeves",
+      "baseline_rank": 10,
+      "fda_rank": 8,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B00CAMMV5S",
+      "target": "B00CAMJMRS",
+      "text": "Is more purple and elegant and is darker purple in colour",
+      "baseline_rank": 4,
+      "fda_rank": 2,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B00GCR5OPG",
+      "target": "B008TS39QC",
+      "text": "Is lighter and is coral and less revealing",
+      "baseline_rank": 6,
+      "fda_rank": 8,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B001PKTT7E",
+      "target": "B004X0VYKI",
+      "text": "Is solid colored with straps and is darker and has straps",
+      "baseline_rank": 3,
+      "fda_rank": 5,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B007GB2BZI",
+      "target": "B009S5XX0M",
+      "text": "Is blue print with short sleeves and is a blue print",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B005GYSR64",
+      "target": "B004JU0AF2",
+      "text": "Is a solid color with square neckline and the dress is brown with straps",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008BHSG82",
+      "target": "B007WA2VB2",
+      "text": "Has a darker long skirt and lighter top and is gray and fitted at waist",
+      "baseline_rank": 6,
+      "fda_rank": 7,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00FXZX2I4",
+      "target": "B00997L4QE",
+      "text": "Is solid red and is red",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007W9ZSEA",
+      "target": "B00BU5GGXE",
+      "text": "Has more color contrast and is pink and black",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008LTJG3E",
+      "target": "B0096MMWXG",
+      "text": "Has a multi-colored pattern and is printed and shorter",
+      "baseline_rank": 9,
+      "fda_rank": 8,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B006330SY6",
+      "target": "B002EANP9W",
+      "text": "Brown and flowers thin scrapes and look very casual and is darker and shorter",
+      "baseline_rank": 1,
+      "fda_rank": 2,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B0095QLSJW",
+      "target": "B00A16VH28",
+      "text": "Is dark colored and longer sleeves and is shorter and red with sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AAD6KOM",
+      "target": "B0094KQ1NC",
+      "text": "Is white with dots and a black belt and Is white",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007XATMYA",
+      "target": "B00ABF01BM",
+      "text": "Is a shorter wrap around dress and has longer sleeves",
+      "baseline_rank": 10,
+      "fda_rank": 9,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B001NJ5LZG",
+      "target": "B0046Q4K6E",
+      "text": "The red color looks more attractive and party wear and is red with a higher neckline",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B009CPQZ12",
+      "target": "B00DMZAHL2",
+      "text": "Is solid pink and is pink and longer",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AFDH25I",
+      "target": "B00EZW2J8A",
+      "text": "Black and white with striped patterns and black and white with sleeves",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00E0OSMS4",
+      "target": "B00AELHLFC",
+      "text": "Has floral design and has flowers and is blue",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B001157SXU",
+      "target": "B001PDM4E6",
+      "text": "Is pink and shiny with a defined bust and is a vibrant magenta",
+      "baseline_rank": 2,
+      "fda_rank": 3,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B0084DJQ6O",
+      "target": "B00BJ1NFNI",
+      "text": "Is pink in color and is sleeveless and pink",
+      "baseline_rank": 3,
+      "fda_rank": 4,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00AOWQJZ4",
+      "target": "B00DB147AE",
+      "text": "Shinier and brighter colored and is aqua colored without a slit",
+      "baseline_rank": 10,
+      "fda_rank": 9,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00G1ZZDL4",
+      "target": "B0030CY6DW",
+      "text": "Is shorter with brighter pink shade and is more sexual",
+      "baseline_rank": 10,
+      "fda_rank": 9,
+      "rank_delta": 1
+    }
+  ]
+}

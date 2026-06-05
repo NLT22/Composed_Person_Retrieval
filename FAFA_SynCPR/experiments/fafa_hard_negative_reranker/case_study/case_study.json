@@ -1,0 +1,1583 @@
+{
+  "summary": {
+    "config": {
+      "topk": 1000,
+      "delta_mult": -0.015,
+      "margin_quantile": 0.3,
+      "margin_threshold": 0.22002153098583221,
+      "applied_queries": 661
+    },
+    "metrics": {
+      "baseline": {
+        "R1": 46.54859161376953,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.649959564208984,
+        "mINP": 55.643760681152344
+      },
+      "rerank": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.78921890258789,
+        "mINP": 55.78300476074219
+      }
+    },
+    "top1": {
+      "improved_count": 7,
+      "regressed_count": 1,
+      "unchanged_correct": 1024,
+      "unchanged_wrong": 1170
+    },
+    "rank": {
+      "improved_count": 89,
+      "regressed_count": 91,
+      "unchanged_count": 2022
+    },
+    "ap_delta": {
+      "mean": 0.0013925825478509068,
+      "median": 0.0,
+      "positive_count": 89,
+      "negative_count": 91,
+      "zero_count": 2022
+    }
+  },
+  "cases": [
+    {
+      "group": "top1_improved",
+      "query_index": 146,
+      "query_id": 147,
+      "query_person_id": 70,
+      "caption": "Wearing a black jacket, a black and white striped shirt, pink pants, a shoulder bag, and light-colored high-heeled shoes",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_2_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 163,
+        "instance_id": 148,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 162,
+        "instance_id": 147,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 162,
+        "instance_id": 147,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 796,
+      "query_id": 797,
+      "query_person_id": 590,
+      "caption": "Wearing yellow short-sleeves, dark blue jeans, and holding a black bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_3_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 6060,
+        "instance_id": -1,
+        "person_id": 126,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/126/126_57_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 819,
+        "instance_id": 797,
+        "person_id": 590,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_98_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 819,
+        "instance_id": 797,
+        "person_id": 590,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_98_0.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 993,
+      "query_id": 994,
+      "query_person_id": 558,
+      "caption": "Wearing a beige top and denim shorts",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_001_00079_0098_00_006.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 2167,
+        "instance_id": 2145,
+        "person_id": 7357,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007357/007357_008_01521_1036_00_002.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1016,
+        "instance_id": 994,
+        "person_id": 558,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_017_00079_1829_00_001.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1016,
+        "instance_id": 994,
+        "person_id": 558,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_017_00079_1829_00_001.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 1077,
+      "query_id": 1078,
+      "query_person_id": 1088,
+      "caption": "Wearing a yellow top and sky blue pants",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_000_00193_0289_00_001.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 1099,
+        "instance_id": 1077,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_001_00193_0369_04_002.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1100,
+        "instance_id": 1078,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_006_00193_1166_01_004.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1100,
+        "instance_id": 1078,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_006_00193_1166_01_004.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 1798,
+      "query_id": 1799,
+      "query_person_id": 260,
+      "caption": "Wearing glasses, a blue plaid shirt, a blue coat, and white shoes",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_13_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 18390,
+        "instance_id": -1,
+        "person_id": 510,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/510/510_48_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1821,
+        "instance_id": 1799,
+        "person_id": 260,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_14_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1821,
+        "instance_id": 1799,
+        "person_id": 260,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_14_0.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 1925,
+      "query_id": 1926,
+      "query_person_id": 7012,
+      "caption": "Wearing a dark blue suit jacket and a blue tie",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_005_01450_2458_00_003.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 2010,
+        "instance_id": 1988,
+        "person_id": 7110,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007110/007110_005_01470_0604_00_001.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1948,
+        "instance_id": 1926,
+        "person_id": 7012,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_004_01450_1650_00_002.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1948,
+        "instance_id": 1926,
+        "person_id": 7012,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_004_01450_1650_00_002.jpg"
+      }
+    },
+    {
+      "group": "top1_improved",
+      "query_index": 2049,
+      "query_id": 2050,
+      "query_person_id": 7217,
+      "caption": "Wearing a white T-shirt, a blue striped shirt, blue jeans, and a black belt",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_010_01491_0803_00_002.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 1241,
+        "instance_id": 1219,
+        "person_id": 5425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/005425/005425_009_00954_1799_04_006.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 2072,
+        "instance_id": 2050,
+        "person_id": 7217,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_013_01491_0869_02_002.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 2072,
+        "instance_id": 2050,
+        "person_id": 7217,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_013_01491_0869_02_002.jpg"
+      }
+    },
+    {
+      "group": "top1_regressed",
+      "query_index": 1192,
+      "query_id": 1193,
+      "query_person_id": 4963,
+      "caption": "wearing a white coat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_000_00878_0150_03_001.jpg",
+      "base_rank": 1,
+      "rerank_rank": 2,
+      "rank_delta": 1,
+      "base_ap": 1.0,
+      "rerank_ap": 0.5,
+      "ap_delta": -0.5,
+      "base_top1": {
+        "gallery_index": 1215,
+        "instance_id": 1193,
+        "person_id": 4963,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_006_00878_1444_04_004.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1096,
+        "instance_id": 1074,
+        "person_id": 1083,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001083/001083_015_00193_1373_00_008.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1215,
+        "instance_id": 1193,
+        "person_id": 4963,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_006_00878_1444_04_004.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1077,
+      "query_id": 1078,
+      "query_person_id": 1088,
+      "caption": "Wearing a yellow top and sky blue pants",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_000_00193_0289_00_001.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 1099,
+        "instance_id": 1077,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_001_00193_0369_04_002.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1100,
+        "instance_id": 1078,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_006_00193_1166_01_004.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1100,
+        "instance_id": 1078,
+        "person_id": 1088,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001088/001088_006_00193_1166_01_004.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 2049,
+      "query_id": 2050,
+      "query_person_id": 7217,
+      "caption": "Wearing a white T-shirt, a blue striped shirt, blue jeans, and a black belt",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_010_01491_0803_00_002.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 1241,
+        "instance_id": 1219,
+        "person_id": 5425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/005425/005425_009_00954_1799_04_006.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 2072,
+        "instance_id": 2050,
+        "person_id": 7217,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_013_01491_0869_02_002.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 2072,
+        "instance_id": 2050,
+        "person_id": 7217,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007217/007217_013_01491_0869_02_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 796,
+      "query_id": 797,
+      "query_person_id": 590,
+      "caption": "Wearing yellow short-sleeves, dark blue jeans, and holding a black bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_3_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 6060,
+        "instance_id": -1,
+        "person_id": 126,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/126/126_57_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 819,
+        "instance_id": 797,
+        "person_id": 590,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_98_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 819,
+        "instance_id": 797,
+        "person_id": 590,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/590/590_98_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1925,
+      "query_id": 1926,
+      "query_person_id": 7012,
+      "caption": "Wearing a dark blue suit jacket and a blue tie",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_005_01450_2458_00_003.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 2010,
+        "instance_id": 1988,
+        "person_id": 7110,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007110/007110_005_01470_0604_00_001.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1948,
+        "instance_id": 1926,
+        "person_id": 7012,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_004_01450_1650_00_002.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1948,
+        "instance_id": 1926,
+        "person_id": 7012,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007012/007012_004_01450_1650_00_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 146,
+      "query_id": 147,
+      "query_person_id": 70,
+      "caption": "Wearing a black jacket, a black and white striped shirt, pink pants, a shoulder bag, and light-colored high-heeled shoes",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_2_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 163,
+        "instance_id": 148,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 162,
+        "instance_id": 147,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 162,
+        "instance_id": 147,
+        "person_id": 70,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/070/70_83_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 993,
+      "query_id": 994,
+      "query_person_id": 558,
+      "caption": "Wearing a beige top and denim shorts",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_001_00079_0098_00_006.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 2167,
+        "instance_id": 2145,
+        "person_id": 7357,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007357/007357_008_01521_1036_00_002.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1016,
+        "instance_id": 994,
+        "person_id": 558,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_017_00079_1829_00_001.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1016,
+        "instance_id": 994,
+        "person_id": 558,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000558/000558_017_00079_1829_00_001.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1798,
+      "query_id": 1799,
+      "query_person_id": 260,
+      "caption": "Wearing glasses, a blue plaid shirt, a blue coat, and white shoes",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_13_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 1,
+      "rank_delta": -1,
+      "base_ap": 0.5,
+      "rerank_ap": 1.0,
+      "ap_delta": 0.5,
+      "base_top1": {
+        "gallery_index": 18390,
+        "instance_id": -1,
+        "person_id": 510,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/510/510_48_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1821,
+        "instance_id": 1799,
+        "person_id": 260,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_14_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1821,
+        "instance_id": 1799,
+        "person_id": 260,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/260/260_14_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 223,
+      "query_id": 224,
+      "query_person_id": 114,
+      "caption": "Wearing a black windbreaker, a white T-shirt with a black pattern, red pants, black shoes, and a red hat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/114/114_1_0.jpg",
+      "base_rank": 3,
+      "rerank_rank": 2,
+      "rank_delta": -1,
+      "base_ap": 0.3333333432674408,
+      "rerank_ap": 0.5,
+      "ap_delta": 0.1666666567325592,
+      "base_top1": {
+        "gallery_index": 20229,
+        "instance_id": -1,
+        "person_id": 614,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/614/614_51_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 20229,
+        "instance_id": -1,
+        "person_id": 614,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/614/614_51_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 240,
+        "instance_id": 224,
+        "person_id": 114,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/114/114_99_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1186,
+      "query_id": 1187,
+      "query_person_id": 4857,
+      "caption": "wearing a yellow dress",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004857/004857_002_00860_0250_03_001.jpg",
+      "base_rank": 3,
+      "rerank_rank": 2,
+      "rank_delta": -1,
+      "base_ap": 0.3333333432674408,
+      "rerank_ap": 0.5,
+      "ap_delta": 0.1666666567325592,
+      "base_top1": {
+        "gallery_index": 576,
+        "instance_id": 554,
+        "person_id": 4,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000004/000004_008_00009_0444_06_002.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 576,
+        "instance_id": 554,
+        "person_id": 4,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000004/000004_008_00009_0444_06_002.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1209,
+        "instance_id": 1187,
+        "person_id": 4857,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004857/004857_013_00860_0652_02_004.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 276,
+      "query_id": 277,
+      "query_person_id": 136,
+      "caption": "Wearing a white T-shirt, black pants, and a white hat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/136/136_3_0.jpg",
+      "base_rank": 4,
+      "rerank_rank": 3,
+      "rank_delta": -1,
+      "base_ap": 0.25,
+      "rerank_ap": 0.3333333432674408,
+      "ap_delta": 0.0833333432674408,
+      "base_top1": {
+        "gallery_index": 17561,
+        "instance_id": -1,
+        "person_id": 481,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/481/481_57_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 17561,
+        "instance_id": -1,
+        "person_id": 481,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/481/481_57_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 295,
+        "instance_id": 277,
+        "person_id": 136,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/136/136_28_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1699,
+      "query_id": 1700,
+      "query_person_id": 223,
+      "caption": "Wearing a dark blue suit jacket, dark blue pants and leather shoes",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/223/223_2_0.jpg",
+      "base_rank": 5,
+      "rerank_rank": 4,
+      "rank_delta": -1,
+      "base_ap": 0.20000000298023224,
+      "rerank_ap": 0.25,
+      "ap_delta": 0.04999999701976776,
+      "base_top1": {
+        "gallery_index": 8814,
+        "instance_id": -1,
+        "person_id": 207,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/207/207_11_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 8814,
+        "instance_id": -1,
+        "person_id": 207,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/207/207_11_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1722,
+        "instance_id": 1700,
+        "person_id": 223,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/223/223_3_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 6,
+      "query_id": 7,
+      "query_person_id": 4,
+      "caption": "Wearing blue jeans, silver high heels, black tank top, another sunglasses, hair parted",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/004/4_4_0.jpg",
+      "base_rank": 5,
+      "rerank_rank": 4,
+      "rank_delta": -1,
+      "base_ap": 0.20000000298023224,
+      "rerank_ap": 0.25,
+      "ap_delta": 0.04999999701976776,
+      "base_top1": {
+        "gallery_index": 12894,
+        "instance_id": -1,
+        "person_id": 349,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/349/349_76_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 12894,
+        "instance_id": -1,
+        "person_id": 349,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/349/349_76_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 7,
+        "instance_id": 7,
+        "person_id": 4,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/004/4_16_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 2086,
+      "query_id": 2087,
+      "query_person_id": 7270,
+      "caption": "Wearing a black T-shirt and carrying a yellow box",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007270/007270_006_01506_0236_00_001.jpg",
+      "base_rank": 6,
+      "rerank_rank": 5,
+      "rank_delta": -1,
+      "base_ap": 0.1666666716337204,
+      "rerank_ap": 0.20000000298023224,
+      "ap_delta": 0.03333333134651184,
+      "base_top1": {
+        "gallery_index": 15555,
+        "instance_id": -1,
+        "person_id": 425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/425/425_39_1.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 15555,
+        "instance_id": -1,
+        "person_id": 425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/425/425_39_1.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 2109,
+        "instance_id": 2087,
+        "person_id": 7270,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007270/007270_011_01506_0684_00_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 216,
+      "query_id": 217,
+      "query_person_id": 111,
+      "caption": "Wearing a light beige windbreaker, light brown high heels, no sunglasses",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/111/111_2_0.jpg",
+      "base_rank": 13,
+      "rerank_rank": 11,
+      "rank_delta": -2,
+      "base_ap": 0.07692307978868484,
+      "rerank_ap": 0.09090909361839294,
+      "ap_delta": 0.0139860138297081,
+      "base_top1": {
+        "gallery_index": 10874,
+        "instance_id": -1,
+        "person_id": 284,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/284/284_31_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 10874,
+        "instance_id": -1,
+        "person_id": 284,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/284/284_31_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 233,
+        "instance_id": 217,
+        "person_id": 111,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/111/111_21_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1892,
+      "query_id": 1893,
+      "query_person_id": 290,
+      "caption": "Wearing a blue hat, blue long-sleeved shirt, black and white striped shorts, sandals",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/290/290_21_0.jpg",
+      "base_rank": 9,
+      "rerank_rank": 8,
+      "rank_delta": -1,
+      "base_ap": 0.1111111119389534,
+      "rerank_ap": 0.125,
+      "ap_delta": 0.0138888880610466,
+      "base_top1": {
+        "gallery_index": 3907,
+        "instance_id": -1,
+        "person_id": 54,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/054/54_34_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 3907,
+        "instance_id": -1,
+        "person_id": 54,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/054/54_34_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1915,
+        "instance_id": 1893,
+        "person_id": 290,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/290/290_22_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 18,
+      "query_id": 19,
+      "query_person_id": 9,
+      "caption": "Wearing black shorts, light blue shirt, silver high heels",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/009/9_1_0.jpg",
+      "base_rank": 17,
+      "rerank_rank": 14,
+      "rank_delta": -3,
+      "base_ap": 0.05882352963089943,
+      "rerank_ap": 0.0714285746216774,
+      "ap_delta": 0.01260504499077797,
+      "base_top1": {
+        "gallery_index": 11270,
+        "instance_id": -1,
+        "person_id": 297,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/297/297_25_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 11270,
+        "instance_id": -1,
+        "person_id": 297,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/297/297_25_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 19,
+        "instance_id": 19,
+        "person_id": 9,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/009/9_53_1.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 228,
+      "query_id": 229,
+      "query_person_id": 116,
+      "caption": "Wearing a dark blue shirt, a black hat with a red print, and carrying a black bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/116/116_4_0.jpg",
+      "base_rank": 10,
+      "rerank_rank": 9,
+      "rank_delta": -1,
+      "base_ap": 0.10000000149011612,
+      "rerank_ap": 0.1111111119389534,
+      "ap_delta": 0.01111111044883728,
+      "base_top1": {
+        "gallery_index": 18279,
+        "instance_id": -1,
+        "person_id": 508,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/508/508_10_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 18279,
+        "instance_id": -1,
+        "person_id": 508,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/508/508_10_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 245,
+        "instance_id": 229,
+        "person_id": 116,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/116/116_14_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1468,
+      "query_id": 1469,
+      "query_person_id": 318,
+      "caption": "Wearing blue T-shirt, black jeans",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/318/318_4_0.jpg",
+      "base_rank": 13,
+      "rerank_rank": 12,
+      "rank_delta": -1,
+      "base_ap": 0.07692307978868484,
+      "rerank_ap": 0.0833333358168602,
+      "ap_delta": 0.006410256028175354,
+      "base_top1": {
+        "gallery_index": 17899,
+        "instance_id": -1,
+        "person_id": 494,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/494/494_25_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 17899,
+        "instance_id": -1,
+        "person_id": 494,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/494/494_25_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1491,
+        "instance_id": 1469,
+        "person_id": 318,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/318/318_25_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 1473,
+      "query_id": 1474,
+      "query_person_id": 322,
+      "caption": "Wearing a gray jacket, black pants, brown shoes, holding a cardboard box",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/322/322_7_0.jpg",
+      "base_rank": 15,
+      "rerank_rank": 14,
+      "rank_delta": -1,
+      "base_ap": 0.06666667014360428,
+      "rerank_ap": 0.0714285746216774,
+      "ap_delta": 0.00476190447807312,
+      "base_top1": {
+        "gallery_index": 4834,
+        "instance_id": -1,
+        "person_id": 86,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/086/86_69_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 4834,
+        "instance_id": -1,
+        "person_id": 86,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/086/86_69_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1496,
+        "instance_id": 1474,
+        "person_id": 322,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/322/322_5_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_improvements",
+      "query_index": 819,
+      "query_id": 820,
+      "query_person_id": 598,
+      "caption": "Wearing a black top and white skirt",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/598/598_9_0.jpg",
+      "base_rank": 15,
+      "rerank_rank": 14,
+      "rank_delta": -1,
+      "base_ap": 0.06666667014360428,
+      "rerank_ap": 0.0714285746216774,
+      "ap_delta": 0.00476190447807312,
+      "base_top1": {
+        "gallery_index": 9108,
+        "instance_id": -1,
+        "person_id": 221,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/221/221_10_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 9108,
+        "instance_id": -1,
+        "person_id": 221,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/221/221_10_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 842,
+        "instance_id": 820,
+        "person_id": 598,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/598/598_38_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1192,
+      "query_id": 1193,
+      "query_person_id": 4963,
+      "caption": "wearing a white coat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_000_00878_0150_03_001.jpg",
+      "base_rank": 1,
+      "rerank_rank": 2,
+      "rank_delta": 1,
+      "base_ap": 1.0,
+      "rerank_ap": 0.5,
+      "ap_delta": -0.5,
+      "base_top1": {
+        "gallery_index": 1215,
+        "instance_id": 1193,
+        "person_id": 4963,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_006_00878_1444_04_004.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1096,
+        "instance_id": 1074,
+        "person_id": 1083,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001083/001083_015_00193_1373_00_008.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1215,
+        "instance_id": 1193,
+        "person_id": 4963,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004963/004963_006_00878_1444_04_004.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 334,
+      "query_id": 335,
+      "query_person_id": 163,
+      "caption": "Wearing a blue coat, gray trousers, dark gray shoes, a hat, a black beard, and a brown bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/163/163_1_0.jpg",
+      "base_rank": 2,
+      "rerank_rank": 3,
+      "rank_delta": 1,
+      "base_ap": 0.5,
+      "rerank_ap": 0.3333333432674408,
+      "ap_delta": -0.1666666567325592,
+      "base_top1": {
+        "gallery_index": 18869,
+        "instance_id": -1,
+        "person_id": 530,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/530/530_10_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 18869,
+        "instance_id": -1,
+        "person_id": 530,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/530/530_10_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 353,
+        "instance_id": 335,
+        "person_id": 163,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/163/163_3_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 902,
+      "query_id": 903,
+      "query_person_id": 170,
+      "caption": "Wearing a yellow top and black pants",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000170/000170_002_00027_0228_02_001.jpg",
+      "base_rank": 3,
+      "rerank_rank": 4,
+      "rank_delta": 1,
+      "base_ap": 0.3333333432674408,
+      "rerank_ap": 0.25,
+      "ap_delta": -0.0833333432674408,
+      "base_top1": {
+        "gallery_index": 433,
+        "instance_id": 411,
+        "person_id": 102,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/102/C_cropped_rgb091.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 433,
+        "instance_id": 411,
+        "person_id": 102,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/102/C_cropped_rgb091.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 925,
+        "instance_id": 903,
+        "person_id": 170,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000170/000170_015_00027_0699_00_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 950,
+      "query_id": 951,
+      "query_person_id": 403,
+      "caption": "Wearing a red striped coat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000403/000403_001_00062_0448_10_001.jpg",
+      "base_rank": 5,
+      "rerank_rank": 7,
+      "rank_delta": 2,
+      "base_ap": 0.20000000298023224,
+      "rerank_ap": 0.1428571492433548,
+      "ap_delta": -0.05714285373687744,
+      "base_top1": {
+        "gallery_index": 11346,
+        "instance_id": -1,
+        "person_id": 299,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/299/299_32_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 11346,
+        "instance_id": -1,
+        "person_id": 299,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/299/299_32_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 973,
+        "instance_id": 951,
+        "person_id": 403,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000403/000403_005_00062_2614_02_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1465,
+      "query_id": 1466,
+      "query_person_id": 314,
+      "caption": "Wearing a khaki long windbreaker, black pants, black shoes, a black hat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/314/314_43_0.jpg",
+      "base_rank": 4,
+      "rerank_rank": 5,
+      "rank_delta": 1,
+      "base_ap": 0.25,
+      "rerank_ap": 0.20000000298023224,
+      "ap_delta": -0.04999999701976776,
+      "base_top1": {
+        "gallery_index": 6246,
+        "instance_id": -1,
+        "person_id": 129,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/129/129_4_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 6246,
+        "instance_id": -1,
+        "person_id": 129,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/129/129_4_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1488,
+        "instance_id": 1466,
+        "person_id": 314,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/314/314_50_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1021,
+      "query_id": 1022,
+      "query_person_id": 807,
+      "caption": "Wearing an orange dress",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000807/000807_004_00160_0272_00_003.jpg",
+      "base_rank": 5,
+      "rerank_rank": 6,
+      "rank_delta": 1,
+      "base_ap": 0.20000000298023224,
+      "rerank_ap": 0.1666666716337204,
+      "ap_delta": -0.03333333134651184,
+      "base_top1": {
+        "gallery_index": 941,
+        "instance_id": 919,
+        "person_id": 257,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000257/000257_015_00040_0423_00_014.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 941,
+        "instance_id": 919,
+        "person_id": 257,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000257/000257_015_00040_0423_00_014.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1044,
+        "instance_id": 1022,
+        "person_id": 807,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000807/000807_028_00160_1135_05_009.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 835,
+      "query_id": 836,
+      "query_person_id": 607,
+      "caption": "Wearing a green skirt",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/607/607_2_0.jpg",
+      "base_rank": 9,
+      "rerank_rank": 12,
+      "rank_delta": 3,
+      "base_ap": 0.1111111119389534,
+      "rerank_ap": 0.0833333358168602,
+      "ap_delta": -0.0277777761220932,
+      "base_top1": {
+        "gallery_index": 20030,
+        "instance_id": -1,
+        "person_id": 604,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/604/604_19_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 11274,
+        "instance_id": -1,
+        "person_id": 297,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/297/297_37_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 858,
+        "instance_id": 836,
+        "person_id": 607,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/607/607_1_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1040,
+      "query_id": 1041,
+      "query_person_id": 930,
+      "caption": "Wearing a dark blue coat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000930/000930_000_00177_0130_01_001.jpg",
+      "base_rank": 8,
+      "rerank_rank": 10,
+      "rank_delta": 2,
+      "base_ap": 0.125,
+      "rerank_ap": 0.10000000149011612,
+      "ap_delta": -0.02499999850988388,
+      "base_top1": {
+        "gallery_index": 880,
+        "instance_id": 858,
+        "person_id": 619,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/619/619_1_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 880,
+        "instance_id": 858,
+        "person_id": 619,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/619/619_1_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1063,
+        "instance_id": 1041,
+        "person_id": 930,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/000930/000930_004_00177_1082_01_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 468,
+      "query_id": 469,
+      "query_person_id": 207,
+      "caption": "Wearing a white T-shirt with pink print and black pants",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/207/B_cropped_rgb400.jpg",
+      "base_rank": 6,
+      "rerank_rank": 7,
+      "rank_delta": 1,
+      "base_ap": 0.1666666716337204,
+      "rerank_ap": 0.1428571492433548,
+      "ap_delta": -0.0238095223903656,
+      "base_top1": {
+        "gallery_index": 451,
+        "instance_id": 429,
+        "person_id": 128,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/128/C_cropped_rgb178.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 451,
+        "instance_id": 429,
+        "person_id": 128,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/128/C_cropped_rgb178.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 491,
+        "instance_id": 469,
+        "person_id": 207,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/PRCC/train/207/C_cropped_rgb640.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1433,
+      "query_id": 1434,
+      "query_person_id": 6671,
+      "caption": "Wearing a black T-shirt, white pants,  tied hair",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006671/006671_001_01349_0366_00_001.jpg",
+      "base_rank": 7,
+      "rerank_rank": 8,
+      "rank_delta": 1,
+      "base_ap": 0.1428571492433548,
+      "rerank_ap": 0.125,
+      "ap_delta": -0.017857149243354797,
+      "base_top1": {
+        "gallery_index": 1370,
+        "instance_id": 1348,
+        "person_id": 6220,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006220/006220_003_01275_0425_00_004.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1370,
+        "instance_id": 1348,
+        "person_id": 6220,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006220/006220_003_01275_0425_00_004.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1456,
+        "instance_id": 1434,
+        "person_id": 6671,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006671/006671_011_01349_1865_02_005.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1537,
+      "query_id": 1538,
+      "query_person_id": 381,
+      "caption": "Wearing a gray T-shirt, red jacket, khaki pants, red shoes, no sunglasses",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/381/381_1_0.jpg",
+      "base_rank": 7,
+      "rerank_rank": 8,
+      "rank_delta": 1,
+      "base_ap": 0.1428571492433548,
+      "rerank_ap": 0.125,
+      "ap_delta": -0.017857149243354797,
+      "base_top1": {
+        "gallery_index": 11396,
+        "instance_id": -1,
+        "person_id": 300,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/300/300_58_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 11396,
+        "instance_id": -1,
+        "person_id": 300,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/300/300_58_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1560,
+        "instance_id": 1538,
+        "person_id": 381,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/381/381_54_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 357,
+      "query_id": 358,
+      "query_person_id": 175,
+      "caption": "Wearing a red top, red pants, black shoes, and holding a black bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/175/175_2_0.jpg",
+      "base_rank": 8,
+      "rerank_rank": 9,
+      "rank_delta": 1,
+      "base_ap": 0.125,
+      "rerank_ap": 0.1111111119389534,
+      "ap_delta": -0.0138888880610466,
+      "base_top1": {
+        "gallery_index": 8641,
+        "instance_id": -1,
+        "person_id": 197,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/197/197_79_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 8641,
+        "instance_id": -1,
+        "person_id": 197,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/197/197_79_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 378,
+        "instance_id": 358,
+        "person_id": 175,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/175/175_10_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 700,
+      "query_id": 701,
+      "query_person_id": 539,
+      "caption": "wearing white suit",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/539/539_30_0.jpg",
+      "base_rank": 9,
+      "rerank_rank": 10,
+      "rank_delta": 1,
+      "base_ap": 0.1111111119389534,
+      "rerank_ap": 0.10000000149011612,
+      "ap_delta": -0.01111111044883728,
+      "base_top1": {
+        "gallery_index": 2668,
+        "instance_id": -1,
+        "person_id": 14,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/014/14_7_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 2668,
+        "instance_id": -1,
+        "person_id": 14,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/014/14_7_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 723,
+        "instance_id": 701,
+        "person_id": 539,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/539/539_34_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1179,
+      "query_id": 1180,
+      "query_person_id": 4730,
+      "caption": "Wearing a khaki T-shirt , dark gray shorts",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004730/004730_008_00836_0235_04_001.jpg",
+      "base_rank": 13,
+      "rerank_rank": 15,
+      "rank_delta": 2,
+      "base_ap": 0.07692307978868484,
+      "rerank_ap": 0.06666667014360428,
+      "ap_delta": -0.010256409645080566,
+      "base_top1": {
+        "gallery_index": 1117,
+        "instance_id": 1095,
+        "person_id": 1164,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001164/001164_063_00205_2998_00_006.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1117,
+        "instance_id": 1095,
+        "person_id": 1164,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/001164/001164_063_00205_2998_00_006.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1202,
+        "instance_id": 1180,
+        "person_id": 4730,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004730/004730_015_00836_1451_00_004.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 2063,
+      "query_id": 2064,
+      "query_person_id": 7236,
+      "caption": "Wearing a dark blue long-sleeved shirt and glasses at the neck",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007236/007236_005_01497_0727_00_004.jpg",
+      "base_rank": 17,
+      "rerank_rank": 20,
+      "rank_delta": 3,
+      "base_ap": 0.05882352963089943,
+      "rerank_ap": 0.05000000074505806,
+      "ap_delta": -0.00882352888584137,
+      "base_top1": {
+        "gallery_index": 15542,
+        "instance_id": -1,
+        "person_id": 425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/425/425_16_1.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 15542,
+        "instance_id": -1,
+        "person_id": 425,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/425/425_16_1.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 2086,
+        "instance_id": 2064,
+        "person_id": 7236,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/007236/007236_004_01497_0704_00_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1635,
+      "query_id": 1636,
+      "query_person_id": 6890,
+      "caption": "Wearing a pink T-shirt , no hat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006890/006890_001_01416_0130_00_001.jpg",
+      "base_rank": 11,
+      "rerank_rank": 12,
+      "rank_delta": 1,
+      "base_ap": 0.09090909361839294,
+      "rerank_ap": 0.0833333358168602,
+      "ap_delta": -0.007575757801532745,
+      "base_top1": {
+        "gallery_index": 1425,
+        "instance_id": 1403,
+        "person_id": 6541,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006541/006541_010_01329_1733_00_005.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 1425,
+        "instance_id": 1403,
+        "person_id": 6541,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006541/006541_010_01329_1733_00_005.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1658,
+        "instance_id": 1636,
+        "person_id": 6890,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/006890/006890_005_01416_0234_03_002.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1559,
+      "query_id": 1560,
+      "query_person_id": 392,
+      "caption": "Wearing a white T-shirt, black long vest, black pants, holding a bag",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/392/392_2_0.jpg",
+      "base_rank": 13,
+      "rerank_rank": 14,
+      "rank_delta": 1,
+      "base_ap": 0.07692307978868484,
+      "rerank_ap": 0.0714285746216774,
+      "ap_delta": -0.005494505167007446,
+      "base_top1": {
+        "gallery_index": 10566,
+        "instance_id": -1,
+        "person_id": 268,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/268/268_60_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 10566,
+        "instance_id": -1,
+        "person_id": 268,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/268/268_60_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1582,
+        "instance_id": 1560,
+        "person_id": 392,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/392/392_20_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 33,
+      "query_id": 34,
+      "query_person_id": 16,
+      "caption": "Wearing black shoes, black pants, black satchel",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/016/16_53_0.jpg",
+      "base_rank": 20,
+      "rerank_rank": 22,
+      "rank_delta": 2,
+      "base_ap": 0.05000000074505806,
+      "rerank_ap": 0.04545454680919647,
+      "ap_delta": -0.0045454539358615875,
+      "base_top1": {
+        "gallery_index": 16925,
+        "instance_id": -1,
+        "person_id": 465,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/465/465_54_1.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 16925,
+        "instance_id": -1,
+        "person_id": 465,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/465/465_54_1.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 36,
+        "instance_id": 34,
+        "person_id": 16,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/016/16_99_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 243,
+      "query_id": 244,
+      "query_person_id": 123,
+      "caption": "Wearing a dark green coat, gray pants, brown shoes, glasses, and a brown hat",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/123/123_3_1.jpg",
+      "base_rank": 22,
+      "rerank_rank": 23,
+      "rank_delta": 1,
+      "base_ap": 0.04545454680919647,
+      "rerank_ap": 0.043478261679410934,
+      "ap_delta": -0.0019762851297855377,
+      "base_top1": {
+        "gallery_index": 6247,
+        "instance_id": -1,
+        "person_id": 129,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/129/129_54_0.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 6247,
+        "instance_id": -1,
+        "person_id": 129,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/129/129_54_0.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 260,
+        "instance_id": 244,
+        "person_id": 123,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/123/123_16_0.jpg"
+      }
+    },
+    {
+      "group": "largest_ap_regressions",
+      "query_index": 1170,
+      "query_id": 1171,
+      "query_person_id": 4706,
+      "caption": "wearing a colorful dress",
+      "reference_path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004706/004706_007_00833_2115_07_004.jpg",
+      "base_rank": 22,
+      "rerank_rank": 23,
+      "rank_delta": 1,
+      "base_ap": 0.04545454680919647,
+      "rerank_ap": 0.043478261679410934,
+      "ap_delta": -0.0019762851297855377,
+      "base_top1": {
+        "gallery_index": 19454,
+        "instance_id": -1,
+        "person_id": 564,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/564/564_26_1.jpg"
+      },
+      "rerank_top1": {
+        "gallery_index": 19454,
+        "instance_id": -1,
+        "person_id": 564,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/Celeb-reID/564/564_26_1.jpg"
+      },
+      "gt_first": {
+        "gallery_index": 1193,
+        "instance_id": 1171,
+        "person_id": 4706,
+        "path": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/data/LAST/004706/004706_000_00833_0165_00_001.jpg"
+      }
+    }
+  ]
+}

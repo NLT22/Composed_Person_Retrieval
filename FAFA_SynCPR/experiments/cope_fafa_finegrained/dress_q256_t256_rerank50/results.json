@@ -1,0 +1,647 @@
+{
+  "settings": {
+    "config": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/config_fiq_paper.yaml",
+    "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+    "data_path": "ACL25-CoPE/fashionIQ_dataset",
+    "category": "dress",
+    "output_dir": "Composed_Person_Retrieval/FAFA_SynCPR/experiments/cope_fafa_finegrained/dress_q256_t256_rerank50",
+    "device": "cuda:0",
+    "batch_size": 8,
+    "num_workers": 4,
+    "max_queries": 256,
+    "max_targets": 256,
+    "fda_k": 6,
+    "score_chunk": 128,
+    "rerank_topk": 50,
+    "alphas": "0,0.05,0.1,0.2,0.3,0.5,0.75,1,1.5,2",
+    "local_files_only": false
+  },
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+  "num_targets": 256,
+  "baseline": {
+    "num_queries": 256,
+    "R10": 78.90625,
+    "R50": 93.75,
+    "mean_rank": 11.18359375
+  },
+  "baseline_eval": {
+    "num_queries": 128,
+    "R10": 75.78125,
+    "R50": 92.96875,
+    "mean_rank": 11.8515625
+  },
+  "best_alpha": 0.1,
+  "best_fda": {
+    "alpha": 0.1,
+    "dev_R10": 82.03125,
+    "dev_R50": 94.53125,
+    "dev_mean_rank": 10.3125,
+    "eval_R10": 75.78125,
+    "eval_R50": 92.96875,
+    "eval_mean_rank": 11.8828125
+  },
+  "all_fda": {
+    "num_queries": 256,
+    "R10": 78.90625,
+    "R50": 93.75,
+    "mean_rank": 11.09765625
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.0,
+      "dev_R10": 82.03125,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.515625,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8515625
+    },
+    {
+      "alpha": 0.05,
+      "dev_R10": 82.03125,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.34375,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8828125
+    },
+    {
+      "alpha": 0.1,
+      "dev_R10": 82.03125,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.3125,
+      "eval_R10": 75.78125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.8828125
+    },
+    {
+      "alpha": 0.2,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.4296875,
+      "eval_R10": 75.0,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 11.96875
+    },
+    {
+      "alpha": 0.3,
+      "dev_R10": 81.25,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.5078125,
+      "eval_R10": 75.0,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.1015625
+    },
+    {
+      "alpha": 0.5,
+      "dev_R10": 79.6875,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.828125,
+      "eval_R10": 74.21875,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.2734375
+    },
+    {
+      "alpha": 0.75,
+      "dev_R10": 79.6875,
+      "dev_R50": 94.53125,
+      "dev_mean_rank": 10.9609375,
+      "eval_R10": 73.4375,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.4609375
+    },
+    {
+      "alpha": 1.0,
+      "dev_R10": 77.34375,
+      "dev_R50": 95.3125,
+      "dev_mean_rank": 11.1171875,
+      "eval_R10": 71.875,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 12.6484375
+    },
+    {
+      "alpha": 1.5,
+      "dev_R10": 75.0,
+      "dev_R50": 95.3125,
+      "dev_mean_rank": 11.4140625,
+      "eval_R10": 70.3125,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 13.0
+    },
+    {
+      "alpha": 2.0,
+      "dev_R10": 75.78125,
+      "dev_R50": 95.3125,
+      "dev_mean_rank": 11.7109375,
+      "eval_R10": 71.875,
+      "eval_R50": 92.96875,
+      "eval_mean_rank": 13.234375
+    }
+  ],
+  "rank_changes": [
+    {
+      "ref": "B008LTJG3E",
+      "target": "B00D4JNBC8",
+      "text": "Has a brighter color and is more of a boot with shorter heels and is a shoe",
+      "baseline_rank": 9,
+      "fda_rank": 16,
+      "rank_delta": -7
+    },
+    {
+      "ref": "B0081JJ9FO",
+      "target": "B0097C8UAO",
+      "text": "Is a black dress with a shade of grey and is similar in black",
+      "baseline_rank": 33,
+      "fda_rank": 39,
+      "rank_delta": -6
+    },
+    {
+      "ref": "B00B923WCQ",
+      "target": "B005GQPE4K",
+      "text": "One shouldered grey dress and Is more blue and has a slit",
+      "baseline_rank": 36,
+      "fda_rank": 31,
+      "rank_delta": 5
+    },
+    {
+      "ref": "B0092QK9AY",
+      "target": "B007ORZ1PG",
+      "text": "Is solid nude color and has straps instead of long sleeves and has two colors",
+      "baseline_rank": 19,
+      "fda_rank": 15,
+      "rank_delta": 4
+    },
+    {
+      "ref": "B0016LHFE6",
+      "target": "B009LIHN3O",
+      "text": "Is sexier and more revealing and it has no collar and has a shorter sleeve",
+      "baseline_rank": 47,
+      "fda_rank": 43,
+      "rank_delta": 4
+    },
+    {
+      "ref": "B004VJ217Q",
+      "target": "B00DC6UJ0K",
+      "text": "Has more flair and smaller print and is shorter",
+      "baseline_rank": 32,
+      "fda_rank": 29,
+      "rank_delta": 3
+    },
+    {
+      "ref": "B005FLWZCA",
+      "target": "B0087PLHB6",
+      "text": "Is a lighter color and is solid white",
+      "baseline_rank": 9,
+      "fda_rank": 6,
+      "rank_delta": 3
+    },
+    {
+      "ref": "B00BTT3R0Q",
+      "target": "B00CCBVN1K",
+      "text": "Is no sleeves and darker color and has markings in black and red flowers",
+      "baseline_rank": 34,
+      "fda_rank": 37,
+      "rank_delta": -3
+    },
+    {
+      "ref": "B00CW6HT7W",
+      "target": "B00DVH1QS4",
+      "text": "Is off the shoulder with one shorter sleeve and has longer sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 6,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B007SV9A5A",
+      "target": "B005EOD18K",
+      "text": "Is more floral print and less striped and white",
+      "baseline_rank": 12,
+      "fda_rank": 10,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B007TDELU6",
+      "target": "B00AA95P56",
+      "text": "Has longer sleeves and a shorter skirt and it shorter and has longer sleeves",
+      "baseline_rank": 20,
+      "fda_rank": 22,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B00BXK91FG",
+      "target": "B0070YINNK",
+      "text": "Is dark grey and longer sleeves and is black colored with patterns",
+      "baseline_rank": 9,
+      "fda_rank": 11,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B005JDB3UO",
+      "target": "B00EOXSEN4",
+      "text": "Has a high-low hem and no words and is pink and flowing",
+      "baseline_rank": 23,
+      "fda_rank": 25,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B0036DE0R2",
+      "target": "B00A16DXWK",
+      "text": "Has less sleeves with red and gray and is blue with a higher neckline and black belt",
+      "baseline_rank": 5,
+      "fda_rank": 3,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B008O8MESQ",
+      "target": "B0048C7MMU",
+      "text": "Is shorter knee length and airy and is black with straps",
+      "baseline_rank": 13,
+      "fda_rank": 15,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B00E1ZTATW",
+      "target": "B00BUKL1IY",
+      "text": "Is solid white and longer and is black and form fitted with a v-neck",
+      "baseline_rank": 47,
+      "fda_rank": 45,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B009CMY4BS",
+      "target": "B0091PLEKA",
+      "text": "Is gold and strapless and button front longer sleeves",
+      "baseline_rank": 5,
+      "fda_rank": 4,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00F4WI9H0",
+      "target": "B0077SM1Z0",
+      "text": "Is longer and more elegant and is longer and sleeveless",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B000WIRE54",
+      "target": "B007UYY43I",
+      "text": "Has longer sleeves and a different color and has longer sleeves and is more casual",
+      "baseline_rank": 11,
+      "fda_rank": 10,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B009KQVCAM",
+      "target": "B00A0I6GSC",
+      "text": "Its blue with higher neckline and is more blue and higher at the neckline",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008UEW5RO",
+      "target": "B00AIBYV1K",
+      "text": "Is more transparent and is more solid colored",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007G6BODI",
+      "target": "B008PZ0Y62",
+      "text": "Is darker and shorter in length and is sleeveless",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00BQVAVRY",
+      "target": "B005SMZW7Q",
+      "text": "Is shorter with longer sleeves and is shorter has three quarter length sleeves",
+      "baseline_rank": 14,
+      "fda_rank": 13,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0080N9HNU",
+      "target": "B006ZO5GC2",
+      "text": "Is shorter and has animal print and the dress has cheetah print and more revealing",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0054DKVWK",
+      "target": "B0076ZYQ6G",
+      "text": "Is a black dress and the dress is black and not a shoe",
+      "baseline_rank": 45,
+      "fda_rank": 44,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00DOS53RA",
+      "target": "B00B59UOBU",
+      "text": "Is longer darker and Is longer and simplier",
+      "baseline_rank": 6,
+      "fda_rank": 7,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00AOJVGYQ",
+      "target": "B00AAOD3LO",
+      "text": "Is brighter in color and is a light floral pattern",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00A7N4DC6",
+      "target": "B00B5VXRTO",
+      "text": "Is a short dress with a v neck and is a tan coloring with fabric overlapping on top",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0066NI17E",
+      "target": "B00DC0XN0O",
+      "text": "Is longer and has more pink and is pink with sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007B98014",
+      "target": "B004SIUT1A",
+      "text": "Black with red belt and It is less black and has a shoulder off",
+      "baseline_rank": 13,
+      "fda_rank": 12,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B004VLI08S",
+      "target": "B007PAD51E",
+      "text": "Is less party like and has a white bodice and grey skirt",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007FKA7E2",
+      "target": "B0029XKWKO",
+      "text": "Plain black and sleeveless and is darker in color and solid colored",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00B08494E",
+      "target": "B00CVTMGTG",
+      "text": "Has no sleeves with slim straps floral dress and is longer and has a circular pattern",
+      "baseline_rank": 14,
+      "fda_rank": 13,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B006361YUA",
+      "target": "B0095JQU2E",
+      "text": "Is white and strapless and Is white",
+      "baseline_rank": 4,
+      "fda_rank": 5,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B002Z7FONO",
+      "target": "B00B5P4VG8",
+      "text": "Is a formal v necked gown and is v neck and longer",
+      "baseline_rank": 28,
+      "fda_rank": 29,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B008596XXG",
+      "target": "B0094GWN38",
+      "text": "Is white and less revealing and is white and same length all around bottom",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00B5KMPA2",
+      "target": "B00B1G5SPY",
+      "text": "Is longer with no straps and is much longer and dark",
+      "baseline_rank": 15,
+      "fda_rank": 14,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B002TKJL40",
+      "target": "B0038HFFXY",
+      "text": "Has longer sleeves and is short sleeved and shorter",
+      "baseline_rank": 5,
+      "fda_rank": 4,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00DQHXEO8",
+      "target": "B00DV3WRA4",
+      "text": "Shorter sleeves and chevron striped and has chevron pattern",
+      "baseline_rank": 5,
+      "fda_rank": 4,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AWKKHOC",
+      "target": "B0091GR192",
+      "text": "Is lighter and orange and sleeveless",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008E7IA12",
+      "target": "B00BGK4I3S",
+      "text": "Is green pattern and lightly pleated and has a floral print that is harder to see",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0030IMZ1G",
+      "target": "B001FWNNC4",
+      "text": "Has longer sleeves and lighter in color and is solid colors with short sleeves",
+      "baseline_rank": 6,
+      "fda_rank": 7,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00FP87XX4",
+      "target": "B009IE33SU",
+      "text": "Is orange and has longer sleeves and is orange and has longer sleeves",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00EOW7882",
+      "target": "B00D61ZCGW",
+      "text": "Is more revealing and longer and It is longer and has no sleeves",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AZE7306",
+      "target": "B00686DR00",
+      "text": "Id darker with no sraps and is a black ruffles design",
+      "baseline_rank": 3,
+      "fda_rank": 4,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B006361ONM",
+      "target": "B00DCCJBKS",
+      "text": "Is black in color and sexy dress and is black and more fitted",
+      "baseline_rank": 6,
+      "fda_rank": 7,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B007PPHY70",
+      "target": "B00662GT3I",
+      "text": "Is more colorful and looser and mover chest coverage and wider skirt",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B001DXL1WY",
+      "target": "B00575VVGU",
+      "text": "Is less revealing and has a pattern and less of a V-neck",
+      "baseline_rank": 24,
+      "fda_rank": 25,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00967AMPG",
+      "target": "B0097JITVM",
+      "text": "Is more princess like and is a lot shorter and pure white with straps",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B001QUX9KQ",
+      "target": "B00AQOH8XW",
+      "text": "Is more black and is black with one strap",
+      "baseline_rank": 12,
+      "fda_rank": 11,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00CFUEHAW",
+      "target": "B00BPYQ25M",
+      "text": "Bodycon with darker color and is dark in color and more fitted",
+      "baseline_rank": 39,
+      "fda_rank": 38,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00BIJGMD6",
+      "target": "B00CCC0B1C",
+      "text": "Has more polka dots and is darker with polka dots",
+      "baseline_rank": 2,
+      "fda_rank": 3,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B0095QLSJW",
+      "target": "B0059BGIG0",
+      "text": "Is solid black and one shouldered and is solid dark with one shoulder",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0076RQLLW",
+      "target": "B004JLU6DM",
+      "text": "Longer and dark colored and is more black and longer",
+      "baseline_rank": 17,
+      "fda_rank": 16,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008PG0SOO",
+      "target": "B00CB2N8FY",
+      "text": "Has long sleeves and is black and Has long sleeves and is shorter",
+      "baseline_rank": 1,
+      "fda_rank": 2,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B00DR8ZWAU",
+      "target": "B00C1ITU6Y",
+      "text": "Is more flowery and with short sleeves and is black with floral patterns",
+      "baseline_rank": 14,
+      "fda_rank": 15,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B008QVZT3I",
+      "target": "B005DRAVT0",
+      "text": "Is black with longer sleeves and is darker and has longer sleeves",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008BHCS2C",
+      "target": "B0083F70SY",
+      "text": "Has a more colorful floral pattern and bleted",
+      "baseline_rank": 1,
+      "fda_rank": 2,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B004MMFVQ0",
+      "target": "B004ECLRO8",
+      "text": "Is more metallic with a tighter fit and is a fitted grey and black mini dress with pockets",
+      "baseline_rank": 9,
+      "fda_rank": 10,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B004VM5W1K",
+      "target": "B004VERF8Q",
+      "text": "Is black and strapless and does not cover shoulders",
+      "baseline_rank": 9,
+      "fda_rank": 8,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007WA3RBK",
+      "target": "B008BHSSMG",
+      "text": "Has more print work and is pink and less strappy",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B009P1MYNQ",
+      "target": "B00D9OXH2M",
+      "text": "Has longer sleeves and black and white with belt and is black and grey with a belt and longer sleeves",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0091C68MW",
+      "target": "B0016LHFE6",
+      "text": "Short sleeved black dress with collar and has short sleeves and a collar",
+      "baseline_rank": 4,
+      "fda_rank": 5,
+      "rank_delta": -1
+    }
+  ]
+}

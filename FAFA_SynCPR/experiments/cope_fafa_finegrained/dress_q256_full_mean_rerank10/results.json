@@ -1,0 +1,299 @@
+{
+  "settings": {
+    "config": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/config_fiq_paper.yaml",
+    "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+    "data_path": "ACL25-CoPE/fashionIQ_dataset",
+    "category": "dress",
+    "output_dir": "Composed_Person_Retrieval/FAFA_SynCPR/experiments/cope_fafa_finegrained/dress_q256_full_mean_rerank10",
+    "device": "cuda:0",
+    "batch_size": 16,
+    "num_workers": 8,
+    "max_queries": 256,
+    "max_targets": 0,
+    "fda_k": 6,
+    "query_k": 8,
+    "fda_mode": "mean",
+    "score_chunk": 256,
+    "query_score_chunk": 16,
+    "target_score_chunk": 32,
+    "rerank_topk": 10,
+    "alphas": "0,0.05,0.1,0.2,0.3,0.5,0.75,1,1.5,2",
+    "local_files_only": false
+  },
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+  "num_targets": 3817,
+  "baseline": {
+    "num_queries": 256,
+    "R10": 36.71875,
+    "R50": 63.671875,
+    "mean_rank": 151.8046875
+  },
+  "baseline_eval": {
+    "num_queries": 128,
+    "R10": 33.59375,
+    "R50": 61.71875,
+    "mean_rank": 160.703125
+  },
+  "best_alpha": 0.05,
+  "best_fda": {
+    "alpha": 0.05,
+    "dev_R10": 39.84375,
+    "dev_R50": 65.625,
+    "dev_mean_rank": 142.84375,
+    "eval_R10": 33.59375,
+    "eval_R50": 61.71875,
+    "eval_mean_rank": 160.6796875
+  },
+  "all_fda": {
+    "num_queries": 256,
+    "R10": 36.71875,
+    "R50": 63.671875,
+    "mean_rank": 151.76171875
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.90625,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.703125
+    },
+    {
+      "alpha": 0.05,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.84375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6796875
+    },
+    {
+      "alpha": 0.1,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.84375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6796875
+    },
+    {
+      "alpha": 0.2,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.921875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6953125
+    },
+    {
+      "alpha": 0.3,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.921875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6953125
+    },
+    {
+      "alpha": 0.5,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 142.921875,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6171875
+    },
+    {
+      "alpha": 0.75,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.03125,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.6015625
+    },
+    {
+      "alpha": 1.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.0859375,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.609375
+    },
+    {
+      "alpha": 1.5,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.15625,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.609375
+    },
+    {
+      "alpha": 2.0,
+      "dev_R10": 39.84375,
+      "dev_R50": 65.625,
+      "dev_mean_rank": 143.2578125,
+      "eval_R10": 33.59375,
+      "eval_R50": 61.71875,
+      "eval_mean_rank": 160.640625
+    }
+  ],
+  "rank_changes": [
+    {
+      "ref": "B00G6TRZE8",
+      "target": "B003ZJ6GCO",
+      "text": "A low cut black gown and is in solid black and a lot longer",
+      "baseline_rank": 10,
+      "fda_rank": 5,
+      "rank_delta": 5
+    },
+    {
+      "ref": "B00FXZX2I4",
+      "target": "B00997L4QE",
+      "text": "Is solid red and is red",
+      "baseline_rank": 7,
+      "fda_rank": 5,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B008OKGFF2",
+      "target": "B00ETGEI1I",
+      "text": "Is longer sleeved with black skirt and is long sleeve and darker pattern with black skirt",
+      "baseline_rank": 2,
+      "fda_rank": 4,
+      "rank_delta": -2
+    },
+    {
+      "ref": "B0080N9HNU",
+      "target": "B006ZO5GC2",
+      "text": "Is shorter and has animal print and the dress has cheetah print and more revealing",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00967AMPG",
+      "target": "B00AWM67OE",
+      "text": "Less full skirt with slit to thigh and has a slit and is more form fitting",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0094QX5SK",
+      "target": "B00B1AVTWG",
+      "text": "Is offwhite with black belt and longer seethrough skirt and is white with a black belr",
+      "baseline_rank": 2,
+      "fda_rank": 3,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B001HK23KM",
+      "target": "B002TKJL40",
+      "text": "And black and the shoulder straps more resemble a crop top",
+      "baseline_rank": 5,
+      "fda_rank": 6,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B007W9ZSEA",
+      "target": "B00BU5GGXE",
+      "text": "Has more color contrast and is pink and black",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B007Y37P22",
+      "target": "B006ZR2U8W",
+      "text": "More revealing and shorter in length and is more strappy and emerald",
+      "baseline_rank": 3,
+      "fda_rank": 4,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B006330SY6",
+      "target": "B002EANP9W",
+      "text": "Brown and flowers thin scrapes and look very casual and is darker and shorter",
+      "baseline_rank": 1,
+      "fda_rank": 2,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B0095QLSJW",
+      "target": "B00A16VH28",
+      "text": "Is dark colored and longer sleeves and is shorter and red with sleeves",
+      "baseline_rank": 8,
+      "fda_rank": 7,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00FP87XX4",
+      "target": "B009IE33SU",
+      "text": "Is orange and has longer sleeves and is orange and has longer sleeves",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B008B2OOQK",
+      "target": "B004LKRWGA",
+      "text": "Is over one shoulder and pink and has a strap on online on side and is pink",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00EOW7882",
+      "target": "B00D61ZCGW",
+      "text": "Is more revealing and longer and It is longer and has no sleeves",
+      "baseline_rank": 10,
+      "fda_rank": 9,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B009CPQZ12",
+      "target": "B00DMZAHL2",
+      "text": "Is solid pink and is pink and longer",
+      "baseline_rank": 6,
+      "fda_rank": 5,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B009MB17B4",
+      "target": "B007C7JGSG",
+      "text": "Has spaghetti straps and is blue and is blue with thin straps",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00AOWQJZ4",
+      "target": "B00DB147AE",
+      "text": "Shinier and brighter colored and is aqua colored without a slit",
+      "baseline_rank": 10,
+      "fda_rank": 9,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B001PKTT7E",
+      "target": "B004X0VYKI",
+      "text": "Is solid colored with straps and is darker and has straps",
+      "baseline_rank": 3,
+      "fda_rank": 4,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B007WAT0S4",
+      "target": "B007WATTX0",
+      "text": "Cheetah print long maxi dress and Is longer and has a different neckline",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    }
+  ]
+}

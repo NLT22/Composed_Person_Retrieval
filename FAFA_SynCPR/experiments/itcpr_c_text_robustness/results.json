@@ -1,0 +1,582 @@
+{
+  "task": "ITCPR-C text robustness pilot",
+  "itcpr_root": "../data",
+  "checkpoint": "tuned_recall_at1_step.pt",
+  "itcpr_cache": "experiments/fafa_pretrained/itcpr_fafa_features.pt",
+  "reranker_checkpoint": "experiments/fafa_hard_negative_reranker/fafa_hard_negative_reranker.pt",
+  "num_queries": 2202,
+  "num_gallery": 20510,
+  "clean_baseline": {
+    "R1": 46.54859161376953,
+    "R5": 66.16712188720703,
+    "R10": 73.2515869140625,
+    "mAP": 55.649959564208984,
+    "mINP": 55.643760681152344
+  },
+  "results": [
+    {
+      "corruption": "clean",
+      "severity": 0,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 46.54859161376953,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.649959564208984,
+        "mINP": 55.643760681152344
+      }
+    },
+    {
+      "corruption": "character_filter",
+      "severity": 1,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 40.00908279418945,
+        "R5": 61.08083724975586,
+        "R10": 68.48320007324219,
+        "mAP": 49.822933197021484,
+        "mINP": 49.76692581176758
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing a brown plaid shirt, black leahter sohes, another dark gray T-shirt, another blue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "eWaring a white t-shirt, another pair fo jeans, black shoes and dragging a suitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of blue shorst, another green T-shitr, sunglasses and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, another green T-shirt, another pair of blac ksheos, sunglasses, jacket off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing another pair of black sneakers, anohter pusre, sunglasses and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "character_filter",
+      "severity": 1,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 39.78201675415039,
+        "R5": 61.08083724975586,
+        "R10": 68.48320007324219,
+        "mAP": 49.71275329589844,
+        "mINP": 49.65925979614258
+      },
+      "applied_queries": 528,
+      "margin_threshold": 0.20964565873146057,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "character_filter",
+      "severity": 3,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 28.428701400756836,
+        "R5": 48.4105339050293,
+        "R10": 56.44868087768555,
+        "mAP": 38.07719421386719,
+        "mINP": 38.042381286621094
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearign a brown plaid shrit, black leather sohes, anothre dark grya Ts-hirt, another blue jaesn"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "eWairng a white t-shirt, another pair of jeans, black sheo san ddraggign a suictase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of bleu shorts, another green T-shirt ,usnglasses and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing blac ksohrts, another green -Tshrit, another pair of blac kshose, sunglasse,s jacket off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing another pair of lback sneakers, another psrue ,sungalsses and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "character_filter",
+      "severity": 3,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 28.24704933166504,
+        "R5": 48.50136184692383,
+        "R10": 56.44868087768555,
+        "mAP": 37.98284912109375,
+        "mINP": 37.948028564453125
+      },
+      "applied_queries": 545,
+      "margin_threshold": 0.17045310139656067,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "RemoveChar_filter",
+      "severity": 1,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 40.19073486328125,
+        "R5": 61.76203536987305,
+        "R10": 69.39146423339844,
+        "mAP": 50.26091384887695,
+        "mINP": 50.243167877197266
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing a brown plad shirt, black leather shoes, another dark gray T-shirt, another bue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing a white t-shirt, another pai of jeans, black shoes and dagging a suitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearin another pir of blue shorts, another green T-shirt, sunglasses and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, anoter green T-shirt, another pair of black hoes, sunglasses, jacket off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing another pair of black sneakers, another puse, sunglases and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "RemoveChar_filter",
+      "severity": 1,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 40.145320892333984,
+        "R5": 61.85285949707031,
+        "R10": 69.3006362915039,
+        "mAP": 50.25538635253906,
+        "mINP": 50.23790740966797
+      },
+      "applied_queries": 522,
+      "margin_threshold": 0.20801936089992523,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "RemoveChar_filter",
+      "severity": 3,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 29.791099548339844,
+        "R5": 50.317893981933594,
+        "R10": 57.72025680541992,
+        "mAP": 39.49198913574219,
+        "mINP": 39.46206283569336
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Weaing a brown plaid shirt, back lehr shoes another dark gray -shirt, anther blue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wering a white t-shirt another par f jeans, blak shoes and draging a uitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing anther pair of blue shors, anothr gree T-shirt, unlsses and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing lack shorts, anoher green T-shirt, nothr pair of lack soes, sungasses jacket off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearig another pir o back sneakers, another purse, sungases and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "RemoveChar_filter",
+      "severity": 3,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 29.791099548339844,
+        "R5": 50.36330795288086,
+        "R10": 57.72025680541992,
+        "mAP": 39.485877990722656,
+        "mINP": 39.45594787597656
+      },
+      "applied_queries": 546,
+      "margin_threshold": 0.17757797241210938,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "qwerty_filter",
+      "severity": 1,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 39.55495071411133,
+        "R5": 60.5358772277832,
+        "R10": 67.93824005126953,
+        "mAP": 49.39198684692383,
+        "mINP": 49.37495803833008
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Aearing a brown plaid shirt, black leather shies, another dark gray T-shirt, another blue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging w suitvase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of blue shorts, znother green T-shirt, sunglasees and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglaxses, jacket orf"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing another pair if black sneakers, anothrr purse, sunglasses and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "qwerty_filter",
+      "severity": 1,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 39.55495071411133,
+        "R5": 60.44505310058594,
+        "R10": 67.847412109375,
+        "mAP": 49.391117095947266,
+        "mINP": 49.3740119934082
+      },
+      "applied_queries": 538,
+      "margin_threshold": 0.2058066725730896,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "qwerty_filter",
+      "severity": 3,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 28.519529342651367,
+        "R5": 48.63759994506836,
+        "R10": 55.90372848510742,
+        "mAP": 38.107051849365234,
+        "mINP": 38.091392517089844
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing a briwn plajd shkrg, black leather shoes, anofhsr dark grag T-shirt, another blue jeajs"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing s white t-shjrt, abofhet pair of jeabs, black shoex and dragging a suitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pakr of blue dhorts, znother green F-shirt, sunhlasses ajd javket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearibg black snorts, another grwen T-sjirt, another paif og black shoes, wunglasses, jackeg off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Weading another paid of black sneakers, anktber purse, sunglqsses and hat pff"
+        }
+      ]
+    },
+    {
+      "corruption": "qwerty_filter",
+      "severity": 3,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 28.610355377197266,
+        "R5": 48.59218978881836,
+        "R10": 55.90372848510742,
+        "mAP": 38.15003967285156,
+        "mINP": 38.13434982299805
+      },
+      "applied_queries": 537,
+      "margin_threshold": 0.16624920070171356,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "remove_space_filter",
+      "severity": 1,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 42.77928924560547,
+        "R5": 62.579471588134766,
+        "R10": 70.29972839355469,
+        "mAP": 52.20814514160156,
+        "mINP": 52.166046142578125
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing a brownplaid shirt, black leather shoes, another dark gray T-shirt, anotherblue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing a whitet-shirt, another pair of jeans, black shoes and dragging asuitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of blue shorts, another green T-shirt,sunglassesand jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, another green T-shirt, another pairofblack shoes, sunglasses, jacket off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing anotherpair of black sneakers, another purse, sunglassesand hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "remove_space_filter",
+      "severity": 1,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 42.6884651184082,
+        "R5": 62.488643646240234,
+        "R10": 70.29972839355469,
+        "mAP": 52.15571594238281,
+        "mINP": 52.113731384277344
+      },
+      "applied_queries": 505,
+      "margin_threshold": 0.2037057876586914,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "remove_space_filter",
+      "severity": 3,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 32.51589584350586,
+        "R5": 53.178932189941406,
+        "R10": 60.626705169677734,
+        "mAP": 42.195499420166016,
+        "mINP": 42.186622619628906
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing abrown plaidshirt,black leathershoes, anotherdark gray T-shirt,anotherbluejeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearinga whitet-shirt,another pair of jeans,black shoes anddraggingasuitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearinganotherpair ofblue shorts,anothergreen T-shirt,sunglassesand jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearingblackshorts, another green T-shirt, another pairofblackshoes,sunglasses,jacketoff"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearinganother pairofblack sneakers,another purse, sunglasses andhatoff"
+        }
+      ]
+    },
+    {
+      "corruption": "remove_space_filter",
+      "severity": 3,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 32.606719970703125,
+        "R5": 53.178932189941406,
+        "R10": 60.762943267822266,
+        "mAP": 42.24528503417969,
+        "mINP": 42.23621368408203
+      },
+      "applied_queries": 379,
+      "margin_threshold": 0.17631110548973083,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "repetition_filter",
+      "severity": 1,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 45.73115539550781,
+        "R5": 66.30335998535156,
+        "R10": 72.66121673583984,
+        "mAP": 55.155052185058594,
+        "mINP": 55.15394973754883
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing a brown plaid shirt, black leather shoes, shoes, another dark gray T-shirt, another blue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing a white t-shirt, another pair of jeans, jeans, black shoes and dragging a suitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of blue shorts, shorts, another green T-shirt, sunglasses and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing another pair of black sneakers, another purse, purse, sunglasses and hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "repetition_filter",
+      "severity": 1,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 45.73115539550781,
+        "R5": 66.34877014160156,
+        "R10": 72.66121673583984,
+        "mAP": 55.14896011352539,
+        "mINP": 55.14920425415039
+      },
+      "applied_queries": 578,
+      "margin_threshold": 0.2199317216873169,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    },
+    {
+      "corruption": "repetition_filter",
+      "severity": 3,
+      "method": "FAFA",
+      "metrics": {
+        "R1": 44.00545120239258,
+        "R5": 65.07720184326172,
+        "R10": 72.38874053955078,
+        "mAP": 53.74971008300781,
+        "mINP": 53.7302360534668
+      },
+      "sample_captions": [
+        {
+          "original": "Wearing a brown plaid shirt, black leather shoes, another dark gray T-shirt, another blue jeans",
+          "corrupted": "Wearing Wearing a brown plaid shirt, black leather shoes, shoes, another dark gray T-shirt, T-shirt, another blue jeans"
+        },
+        {
+          "original": "Wearing a white t-shirt, another pair of jeans, black shoes and dragging a suitcase",
+          "corrupted": "Wearing a white white t-shirt, t-shirt, another pair of of jeans, black shoes and dragging a suitcase"
+        },
+        {
+          "original": "Wearing another pair of blue shorts, another green T-shirt, sunglasses and jacket off",
+          "corrupted": "Wearing another pair of blue shorts, another another green T-shirt, sunglasses and and and jacket off"
+        },
+        {
+          "original": "Wearing black shorts, another green T-shirt, another pair of black shoes, sunglasses, jacket off",
+          "corrupted": "Wearing black shorts, another green T-shirt, T-shirt, another pair of black shoes, sunglasses, jacket off off off"
+        },
+        {
+          "original": "Wearing another pair of black sneakers, another purse, sunglasses and hat off",
+          "corrupted": "Wearing Wearing another pair of black black sneakers, another purse, sunglasses and hat hat off"
+        }
+      ]
+    },
+    {
+      "corruption": "repetition_filter",
+      "severity": 3,
+      "method": "FAFA+SynCPR-gated-rerank",
+      "metrics": {
+        "R1": 43.687557220458984,
+        "R5": 65.03179168701172,
+        "R10": 72.43415069580078,
+        "mAP": 53.60409164428711,
+        "mINP": 53.584922790527344
+      },
+      "applied_queries": 661,
+      "margin_threshold": 0.20161867141723633,
+      "margin_quantile": 0.3,
+      "min_caption_words": 6,
+      "topk": 1000,
+      "delta_mult": -0.015
+    }
+  ],
+  "args": {
+    "itcpr_root": "../data",
+    "checkpoint": "tuned_recall_at1_step.pt",
+    "itcpr_cache": "experiments/fafa_pretrained/itcpr_fafa_features.pt",
+    "reranker_checkpoint": "experiments/fafa_hard_negative_reranker/fafa_hard_negative_reranker.pt",
+    "output_dir": "experiments/itcpr_c_text_robustness",
+    "device": "cuda",
+    "batch_size": 64,
+    "score_batch_size": 512,
+    "query_batch_size": 32,
+    "num_workers": 2,
+    "fda_k": 6,
+    "seed": 42,
+    "max_queries": null,
+    "corruptions": [
+      "clean",
+      "character_filter",
+      "RemoveChar_filter",
+      "qwerty_filter",
+      "remove_space_filter",
+      "repetition_filter"
+    ],
+    "severities": [
+      1,
+      3
+    ],
+    "skip_rerank": false,
+    "topk": 1000,
+    "delta_mult": -0.015,
+    "margin_quantile": 0.3,
+    "min_caption_words": 6
+  }
+}

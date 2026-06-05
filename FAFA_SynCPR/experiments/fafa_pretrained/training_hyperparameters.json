@@ -1,0 +1,8 @@
+{
+  "fda_k": 6,
+  "fda_alpha": 0.5,
+  "fd_margin": 0.5,
+  "transform": "squarepad",
+  "target_ratio": 1.25,
+  "backbone": "pretrain"
+}

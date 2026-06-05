@@ -1,0 +1,13 @@
+{
+  "checkpoint": "experiments/fafa_pair_calibrator/fafa_pair_calibrator.pt",
+  "itcpr_cache": "experiments/fafa_pretrained/itcpr_fafa_features.pt",
+  "metrics": {
+    "R1": 43.55131530761719,
+    "R5": 65.03179168701172,
+    "R10": 72.43415069580078,
+    "mAP": 53.55467224121094,
+    "mINP": 53.534786224365234
+  },
+  "base_scale": 20.085729598999023,
+  "delta_scale": 0.22828780114650726
+}

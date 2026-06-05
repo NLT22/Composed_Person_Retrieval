@@ -1,0 +1,23 @@
+{
+  "syncpr_root": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/SynCPR",
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/Composed_Person_Retrieval/FAFA_SynCPR/tuned_recall_at1_step.pt",
+  "json_name": "SynCPR.json",
+  "num_annotations": 1153230,
+  "range": [
+    0,
+    1153230
+  ],
+  "shard_size": 10000,
+  "feature_shapes": {
+    "qfeats": [
+      "N",
+      256
+    ],
+    "target_tokens": [
+      "N",
+      32,
+      256
+    ]
+  },
+  "dtype": "float16"
+}

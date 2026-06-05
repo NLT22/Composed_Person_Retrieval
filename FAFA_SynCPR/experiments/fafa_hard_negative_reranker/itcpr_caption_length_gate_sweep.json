@@ -1,0 +1,651 @@
+{
+  "baseline": {
+    "R1": 46.54859161376953,
+    "R5": 66.16712188720703,
+    "R10": 73.2515869140625,
+    "mAP": 55.649959564208984,
+    "mINP": 55.643760681152344
+  },
+  "results": [
+    {
+      "min_words": 0,
+      "margin_quantile": 0.1,
+      "applied_queries": 221,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2061767578125,
+        "mAP": 55.7830924987793,
+        "mINP": 55.77690124511719
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 28,
+      "ap_negative": 32
+    },
+    {
+      "min_words": 0,
+      "margin_quantile": 0.2,
+      "applied_queries": 441,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.77960205078125,
+        "mINP": 55.773399353027344
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 59,
+      "ap_negative": 62
+    },
+    {
+      "min_words": 0,
+      "margin_quantile": 0.3,
+      "applied_queries": 661,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.78921890258789,
+        "mINP": 55.78300476074219
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 89,
+      "ap_negative": 91
+    },
+    {
+      "min_words": 0,
+      "margin_quantile": 0.4,
+      "applied_queries": 881,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.786014556884766,
+        "mINP": 55.779815673828125
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 109,
+      "ap_negative": 117
+    },
+    {
+      "min_words": 0,
+      "margin_quantile": 0.5,
+      "applied_queries": 1101,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.78136444091797,
+        "mINP": 55.77516555786133
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 129,
+      "ap_negative": 142
+    },
+    {
+      "min_words": 4,
+      "margin_quantile": 0.1,
+      "applied_queries": 216,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2061767578125,
+        "mAP": 55.783599853515625,
+        "mINP": 55.777400970458984
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 28,
+      "ap_negative": 30
+    },
+    {
+      "min_words": 4,
+      "margin_quantile": 0.2,
+      "applied_queries": 421,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.78007125854492,
+        "mINP": 55.77387237548828
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 58,
+      "ap_negative": 56
+    },
+    {
+      "min_words": 4,
+      "margin_quantile": 0.3,
+      "applied_queries": 627,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.789791107177734,
+        "mINP": 55.7835693359375
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 87,
+      "ap_negative": 82
+    },
+    {
+      "min_words": 4,
+      "margin_quantile": 0.4,
+      "applied_queries": 835,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.786590576171875,
+        "mINP": 55.780391693115234
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 107,
+      "ap_negative": 107
+    },
+    {
+      "min_words": 4,
+      "margin_quantile": 0.5,
+      "applied_queries": 1041,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.12171173095703,
+        "R10": 73.2061767578125,
+        "mAP": 55.78205490112305,
+        "mINP": 55.77586364746094
+      },
+      "top1_improved": 7,
+      "top1_regressed": 1,
+      "ap_positive": 127,
+      "ap_negative": 131
+    },
+    {
+      "min_words": 5,
+      "margin_quantile": 0.1,
+      "applied_queries": 195,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80755615234375,
+        "mINP": 55.80134963989258
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 26,
+      "ap_negative": 28
+    },
+    {
+      "min_words": 5,
+      "margin_quantile": 0.2,
+      "applied_queries": 382,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80561828613281,
+        "mINP": 55.79941177368164
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 54,
+      "ap_negative": 52
+    },
+    {
+      "min_words": 5,
+      "margin_quantile": 0.3,
+      "applied_queries": 566,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.807716369628906,
+        "mINP": 55.80149459838867
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 79,
+      "ap_negative": 75
+    },
+    {
+      "min_words": 5,
+      "margin_quantile": 0.4,
+      "applied_queries": 764,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80485534667969,
+        "mINP": 55.79865646362305
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 99,
+      "ap_negative": 99
+    },
+    {
+      "min_words": 5,
+      "margin_quantile": 0.5,
+      "applied_queries": 951,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.16712188720703,
+        "R10": 73.2061767578125,
+        "mAP": 55.799598693847656,
+        "mINP": 55.79340362548828
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 117,
+      "ap_negative": 118
+    },
+    {
+      "min_words": 6,
+      "margin_quantile": 0.1,
+      "applied_queries": 184,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80755615234375,
+        "mINP": 55.80134963989258
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 26,
+      "ap_negative": 28
+    },
+    {
+      "min_words": 6,
+      "margin_quantile": 0.2,
+      "applied_queries": 355,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.808223724365234,
+        "mINP": 55.80201721191406
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 53,
+      "ap_negative": 48
+    },
+    {
+      "min_words": 6,
+      "margin_quantile": 0.3,
+      "applied_queries": 521,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.811458587646484,
+        "mINP": 55.805240631103516
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 77,
+      "ap_negative": 69
+    },
+    {
+      "min_words": 6,
+      "margin_quantile": 0.4,
+      "applied_queries": 705,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.810874938964844,
+        "mINP": 55.8046760559082
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 96,
+      "ap_negative": 92
+    },
+    {
+      "min_words": 6,
+      "margin_quantile": 0.5,
+      "applied_queries": 877,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2061767578125,
+        "mAP": 55.80561065673828,
+        "mINP": 55.79941940307617
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 114,
+      "ap_negative": 110
+    },
+    {
+      "min_words": 7,
+      "margin_quantile": 0.1,
+      "applied_queries": 178,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80758285522461,
+        "mINP": 55.8013916015625
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 26,
+      "ap_negative": 27
+    },
+    {
+      "min_words": 7,
+      "margin_quantile": 0.2,
+      "applied_queries": 341,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80792999267578,
+        "mINP": 55.80173110961914
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 51,
+      "ap_negative": 45
+    },
+    {
+      "min_words": 7,
+      "margin_quantile": 0.3,
+      "applied_queries": 497,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.81118392944336,
+        "mINP": 55.804962158203125
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 74,
+      "ap_negative": 62
+    },
+    {
+      "min_words": 7,
+      "margin_quantile": 0.4,
+      "applied_queries": 661,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.80745315551758,
+        "mINP": 55.80125427246094
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 92,
+      "ap_negative": 81
+    },
+    {
+      "min_words": 7,
+      "margin_quantile": 0.5,
+      "applied_queries": 822,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2061767578125,
+        "mAP": 55.8021125793457,
+        "mINP": 55.795921325683594
+      },
+      "top1_improved": 7,
+      "top1_regressed": 0,
+      "ap_positive": 109,
+      "ap_negative": 99
+    },
+    {
+      "min_words": 8,
+      "margin_quantile": 0.1,
+      "applied_queries": 159,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.785282135009766,
+        "mINP": 55.77906799316406
+      },
+      "top1_improved": 6,
+      "top1_regressed": 0,
+      "ap_positive": 23,
+      "ap_negative": 20
+    },
+    {
+      "min_words": 8,
+      "margin_quantile": 0.2,
+      "applied_queries": 309,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.78554153442383,
+        "mINP": 55.77933883666992
+      },
+      "top1_improved": 6,
+      "top1_regressed": 0,
+      "ap_positive": 46,
+      "ap_negative": 38
+    },
+    {
+      "min_words": 8,
+      "margin_quantile": 0.3,
+      "applied_queries": 443,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.792415618896484,
+        "mINP": 55.78619384765625
+      },
+      "top1_improved": 6,
+      "top1_regressed": 0,
+      "ap_positive": 66,
+      "ap_negative": 53
+    },
+    {
+      "min_words": 8,
+      "margin_quantile": 0.4,
+      "applied_queries": 591,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.79014587402344,
+        "mINP": 55.78395080566406
+      },
+      "top1_improved": 6,
+      "top1_regressed": 0,
+      "ap_positive": 83,
+      "ap_negative": 67
+    },
+    {
+      "min_words": 8,
+      "margin_quantile": 0.5,
+      "applied_queries": 731,
+      "metrics": {
+        "R1": 46.82107162475586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.78577423095703,
+        "mINP": 55.77958297729492
+      },
+      "top1_improved": 6,
+      "top1_regressed": 0,
+      "ap_positive": 100,
+      "ap_negative": 81
+    },
+    {
+      "min_words": 10,
+      "margin_quantile": 0.1,
+      "applied_queries": 121,
+      "metrics": {
+        "R1": 46.77566146850586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.7619743347168,
+        "mINP": 55.75577163696289
+      },
+      "top1_improved": 5,
+      "top1_regressed": 0,
+      "ap_positive": 16,
+      "ap_negative": 17
+    },
+    {
+      "min_words": 10,
+      "margin_quantile": 0.2,
+      "applied_queries": 235,
+      "metrics": {
+        "R1": 46.77566146850586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.762481689453125,
+        "mINP": 55.756282806396484
+      },
+      "top1_improved": 5,
+      "top1_regressed": 0,
+      "ap_positive": 36,
+      "ap_negative": 28
+    },
+    {
+      "min_words": 10,
+      "margin_quantile": 0.3,
+      "applied_queries": 335,
+      "metrics": {
+        "R1": 46.77566146850586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.77021408081055,
+        "mINP": 55.76399612426758
+      },
+      "top1_improved": 5,
+      "top1_regressed": 0,
+      "ap_positive": 52,
+      "ap_negative": 38
+    },
+    {
+      "min_words": 10,
+      "margin_quantile": 0.4,
+      "applied_queries": 442,
+      "metrics": {
+        "R1": 46.77566146850586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.768245697021484,
+        "mINP": 55.762046813964844
+      },
+      "top1_improved": 5,
+      "top1_regressed": 0,
+      "ap_positive": 65,
+      "ap_negative": 48
+    },
+    {
+      "min_words": 10,
+      "margin_quantile": 0.5,
+      "applied_queries": 538,
+      "metrics": {
+        "R1": 46.77566146850586,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.7627067565918,
+        "mINP": 55.756507873535156
+      },
+      "top1_improved": 5,
+      "top1_regressed": 0,
+      "ap_positive": 77,
+      "ap_negative": 59
+    },
+    {
+      "min_words": 12,
+      "margin_quantile": 0.1,
+      "applied_queries": 90,
+      "metrics": {
+        "R1": 46.73024368286133,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.737884521484375,
+        "mINP": 55.7316780090332
+      },
+      "top1_improved": 4,
+      "top1_regressed": 0,
+      "ap_positive": 13,
+      "ap_negative": 9
+    },
+    {
+      "min_words": 12,
+      "margin_quantile": 0.2,
+      "applied_queries": 160,
+      "metrics": {
+        "R1": 46.73024368286133,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.73779296875,
+        "mINP": 55.73159408569336
+      },
+      "top1_improved": 4,
+      "top1_regressed": 0,
+      "ap_positive": 26,
+      "ap_negative": 16
+    },
+    {
+      "min_words": 12,
+      "margin_quantile": 0.3,
+      "applied_queries": 237,
+      "metrics": {
+        "R1": 46.73024368286133,
+        "R5": 66.16712188720703,
+        "R10": 73.2515869140625,
+        "mAP": 55.742801666259766,
+        "mINP": 55.736576080322266
+      },
+      "top1_improved": 4,
+      "top1_regressed": 0,
+      "ap_positive": 39,
+      "ap_negative": 24
+    },
+    {
+      "min_words": 12,
+      "margin_quantile": 0.4,
+      "applied_queries": 310,
+      "metrics": {
+        "R1": 46.73024368286133,
+        "R5": 66.12171173095703,
+        "R10": 73.2515869140625,
+        "mAP": 55.73918914794922,
+        "mINP": 55.73298263549805
+      },
+      "top1_improved": 4,
+      "top1_regressed": 0,
+      "ap_positive": 48,
+      "ap_negative": 32
+    },
+    {
+      "min_words": 12,
+      "margin_quantile": 0.5,
+      "applied_queries": 374,
+      "metrics": {
+        "R1": 46.73024368286133,
+        "R5": 66.12171173095703,
+        "R10": 73.2515869140625,
+        "mAP": 55.739505767822266,
+        "mINP": 55.733306884765625
+      },
+      "top1_improved": 4,
+      "top1_regressed": 0,
+      "ap_positive": 56,
+      "ap_negative": 38
+    }
+  ]
+}

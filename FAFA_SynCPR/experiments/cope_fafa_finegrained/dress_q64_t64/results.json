@@ -1,0 +1,222 @@
+{
+  "settings": {
+    "config": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/config_fiq_paper.yaml",
+    "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+    "data_path": "ACL25-CoPE/fashionIQ_dataset",
+    "category": "dress",
+    "output_dir": "Composed_Person_Retrieval/FAFA_SynCPR/experiments/cope_fafa_finegrained/dress_q64_t64",
+    "device": "cuda:0",
+    "batch_size": 4,
+    "num_workers": 2,
+    "max_queries": 64,
+    "max_targets": 64,
+    "fda_k": 6,
+    "score_chunk": 128,
+    "alphas": "0,0.05,0.1,0.2,0.3,0.5,0.75,1,1.5,2",
+    "local_files_only": false
+  },
+  "checkpoint": "/media/pc/fa8cd839-121b-4df4-9c0c-0958d9216d28/2025.2/ACL25-CoPE/checkpoints/fiq_dress_paper_fix_distance/best_model",
+  "num_targets": 64,
+  "baseline": {
+    "num_queries": 64,
+    "R10": 93.75,
+    "R50": 100.0,
+    "mean_rank": 3.015625
+  },
+  "baseline_eval": {
+    "num_queries": 32,
+    "R10": 87.5,
+    "R50": 100.0,
+    "mean_rank": 3.84375
+  },
+  "best_alpha": 0.1,
+  "best_fda": {
+    "alpha": 0.1,
+    "dev_R10": 100.0,
+    "dev_R50": 100.0,
+    "dev_mean_rank": 2.03125,
+    "eval_R10": 87.5,
+    "eval_R50": 100.0,
+    "eval_mean_rank": 3.75
+  },
+  "all_fda": {
+    "num_queries": 64,
+    "R10": 93.75,
+    "R50": 100.0,
+    "mean_rank": 2.890625
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.0,
+      "dev_R10": 100.0,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.1875,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 3.84375
+    },
+    {
+      "alpha": 0.05,
+      "dev_R10": 100.0,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.0625,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 3.75
+    },
+    {
+      "alpha": 0.1,
+      "dev_R10": 100.0,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.03125,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 3.75
+    },
+    {
+      "alpha": 0.2,
+      "dev_R10": 100.0,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.0625,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 3.9375
+    },
+    {
+      "alpha": 0.3,
+      "dev_R10": 100.0,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.09375,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 4.0625
+    },
+    {
+      "alpha": 0.5,
+      "dev_R10": 96.875,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.21875,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 4.1875
+    },
+    {
+      "alpha": 0.75,
+      "dev_R10": 96.875,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.25,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 4.40625
+    },
+    {
+      "alpha": 1.0,
+      "dev_R10": 96.875,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.3125,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 4.5625
+    },
+    {
+      "alpha": 1.5,
+      "dev_R10": 96.875,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.53125,
+      "eval_R10": 87.5,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 5.0625
+    },
+    {
+      "alpha": 2.0,
+      "dev_R10": 96.875,
+      "dev_R50": 100.0,
+      "dev_mean_rank": 2.65625,
+      "eval_R10": 84.375,
+      "eval_R50": 100.0,
+      "eval_mean_rank": 5.28125
+    }
+  ],
+  "rank_changes": [
+    {
+      "ref": "B000WIRE54",
+      "target": "B007UYY43I",
+      "text": "Has longer sleeves and a different color and has longer sleeves and is more casual",
+      "baseline_rank": 5,
+      "fda_rank": 3,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B00B923WCQ",
+      "target": "B005GQPE4K",
+      "text": "One shouldered grey dress and Is more blue and has a slit",
+      "baseline_rank": 10,
+      "fda_rank": 8,
+      "rank_delta": 2
+    },
+    {
+      "ref": "B00F4WI9H0",
+      "target": "B0077SM1Z0",
+      "text": "Is longer and more elegant and is longer and sleeveless",
+      "baseline_rank": 3,
+      "fda_rank": 4,
+      "rank_delta": -1
+    },
+    {
+      "ref": "B009KQVCAM",
+      "target": "B00A0I6GSC",
+      "text": "Its blue with higher neckline and is more blue and higher at the neckline",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00CW6HT7W",
+      "target": "B00DVH1QS4",
+      "text": "Is off the shoulder with one shorter sleeve and has longer sleeves",
+      "baseline_rank": 3,
+      "fda_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B004VJ217Q",
+      "target": "B00DC6UJ0K",
+      "text": "Has more flair and smaller print and is shorter",
+      "baseline_rank": 7,
+      "fda_rank": 6,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B00BQVAVRY",
+      "target": "B005SMZW7Q",
+      "text": "Is shorter with longer sleeves and is shorter has three quarter length sleeves",
+      "baseline_rank": 4,
+      "fda_rank": 3,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0080N9HNU",
+      "target": "B006ZO5GC2",
+      "text": "Is shorter and has animal print and the dress has cheetah print and more revealing",
+      "baseline_rank": 2,
+      "fda_rank": 1,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0054DKVWK",
+      "target": "B0076ZYQ6G",
+      "text": "Is a black dress and the dress is black and not a shoe",
+      "baseline_rank": 14,
+      "fda_rank": 13,
+      "rank_delta": 1
+    },
+    {
+      "ref": "B0081JJ9FO",
+      "target": "B0097C8UAO",
+      "text": "Is a black dress with a shade of grey and is similar in black",
+      "baseline_rank": 11,
+      "fda_rank": 12,
+      "rank_delta": -1
+    }
+  ]
+}

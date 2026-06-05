@@ -1,0 +1,12 @@
+{
+  "checkpoint": "experiments/fafa_hard_negative_reranker/fafa_hard_negative_reranker.pt",
+  "metrics": {
+    "R1": 40.96276092529297,
+    "R5": 61.71662139892578,
+    "R10": 68.2561264038086,
+    "mAP": 50.25217056274414,
+    "mINP": 50.22625732421875
+  },
+  "base_scale": 20.214323043823242,
+  "delta_scale": 0.2476881742477417
+}

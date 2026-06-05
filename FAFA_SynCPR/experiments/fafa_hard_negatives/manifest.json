@@ -1,0 +1,582 @@
+[
+  {
+    "shard": "shard_0000000_0009999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0000000_0009999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0010000_0019999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0010000_0019999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0020000_0029999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0020000_0029999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0030000_0039999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0030000_0039999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0040000_0049999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0040000_0049999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0050000_0059999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0050000_0059999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0060000_0069999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0060000_0069999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0070000_0079999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0070000_0079999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0080000_0089999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0080000_0089999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0090000_0099999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0090000_0099999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0100000_0109999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0100000_0109999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0110000_0119999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0110000_0119999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0120000_0129999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0120000_0129999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0130000_0139999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0130000_0139999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0140000_0149999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0140000_0149999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0150000_0159999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0150000_0159999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0160000_0169999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0160000_0169999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0170000_0179999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0170000_0179999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0180000_0189999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0180000_0189999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0190000_0199999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0190000_0199999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0200000_0209999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0200000_0209999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0210000_0219999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0210000_0219999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0220000_0229999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0220000_0229999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0230000_0239999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0230000_0239999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0240000_0249999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0240000_0249999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0250000_0259999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0250000_0259999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0260000_0269999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0260000_0269999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0270000_0279999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0270000_0279999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0280000_0289999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0280000_0289999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0290000_0299999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0290000_0299999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0300000_0309999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0300000_0309999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0310000_0319999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0310000_0319999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0320000_0329999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0320000_0329999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0330000_0339999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0330000_0339999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0340000_0349999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0340000_0349999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0350000_0359999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0350000_0359999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0360000_0369999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0360000_0369999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0370000_0379999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0370000_0379999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0380000_0389999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0380000_0389999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0390000_0399999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0390000_0399999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0400000_0409999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0400000_0409999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0410000_0419999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0410000_0419999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0420000_0429999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0420000_0429999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0430000_0439999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0430000_0439999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0440000_0449999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0440000_0449999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0450000_0459999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0450000_0459999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0460000_0469999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0460000_0469999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0470000_0479999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0470000_0479999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0480000_0489999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0480000_0489999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0490000_0499999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0490000_0499999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0500000_0509999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0500000_0509999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0510000_0519999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0510000_0519999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0520000_0529999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0520000_0529999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0530000_0539999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0530000_0539999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0540000_0549999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0540000_0549999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0550000_0559999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0550000_0559999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0560000_0569999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0560000_0569999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0570000_0579999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0570000_0579999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0580000_0589999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0580000_0589999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0590000_0599999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0590000_0599999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0600000_0609999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0600000_0609999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0610000_0619999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0610000_0619999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0620000_0629999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0620000_0629999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0630000_0639999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0630000_0639999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0640000_0649999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0640000_0649999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0650000_0659999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0650000_0659999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0660000_0669999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0660000_0669999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0670000_0679999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0670000_0679999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0680000_0689999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0680000_0689999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0690000_0699999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0690000_0699999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0700000_0709999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0700000_0709999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0710000_0719999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0710000_0719999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0720000_0729999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0720000_0729999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0730000_0739999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0730000_0739999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0740000_0749999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0740000_0749999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0750000_0759999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0750000_0759999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0760000_0769999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0760000_0769999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0770000_0779999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0770000_0779999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0780000_0789999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0780000_0789999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0790000_0799999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0790000_0799999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0800000_0809999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0800000_0809999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0810000_0819999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0810000_0819999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0820000_0829999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0820000_0829999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0830000_0839999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0830000_0839999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0840000_0849999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0840000_0849999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0850000_0859999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0850000_0859999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0860000_0869999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0860000_0869999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0870000_0879999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0870000_0879999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0880000_0889999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0880000_0889999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0890000_0899999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0890000_0899999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0900000_0909999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0900000_0909999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0910000_0919999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0910000_0919999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0920000_0929999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0920000_0929999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0930000_0939999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0930000_0939999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0940000_0949999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0940000_0949999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0950000_0959999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0950000_0959999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0960000_0969999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0960000_0969999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0970000_0979999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0970000_0979999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0980000_0989999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0980000_0989999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0990000_0999999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_0990000_0999999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1000000_1009999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1000000_1009999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1010000_1019999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1010000_1019999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1020000_1029999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1020000_1029999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1030000_1039999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1030000_1039999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1040000_1049999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1040000_1049999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1050000_1059999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1050000_1059999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1060000_1069999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1060000_1069999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1070000_1079999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1070000_1079999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1080000_1089999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1080000_1089999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1090000_1099999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1090000_1099999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1100000_1109999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1100000_1109999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1110000_1119999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1110000_1119999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1120000_1129999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1120000_1129999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1130000_1139999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1130000_1139999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1140000_1149999.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1140000_1149999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_1150000_1153229.pt",
+    "path": "experiments/fafa_hard_negatives/shard_1150000_1153229.pt",
+    "samples": 3230
+  }
+]

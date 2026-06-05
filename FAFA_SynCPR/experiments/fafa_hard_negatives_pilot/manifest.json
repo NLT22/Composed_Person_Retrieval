@@ -1,0 +1,22 @@
+[
+  {
+    "shard": "shard_0000000_0009999.pt",
+    "path": "experiments/fafa_hard_negatives_pilot/shard_0000000_0009999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0010000_0019999.pt",
+    "path": "experiments/fafa_hard_negatives_pilot/shard_0010000_0019999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0020000_0029999.pt",
+    "path": "experiments/fafa_hard_negatives_pilot/shard_0020000_0029999.pt",
+    "samples": 10000
+  },
+  {
+    "shard": "shard_0030000_0039999.pt",
+    "path": "experiments/fafa_hard_negatives_pilot/shard_0030000_0039999.pt",
+    "samples": 10000
+  }
+]

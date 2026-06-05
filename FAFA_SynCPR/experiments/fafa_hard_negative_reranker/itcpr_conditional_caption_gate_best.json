@@ -1,0 +1,36 @@
+{
+  "checkpoint": "experiments/fafa_hard_negative_reranker/fafa_hard_negative_reranker.pt",
+  "itcpr_cache": "experiments/fafa_pretrained/itcpr_fafa_features.pt",
+  "baseline": {
+    "R1": 46.54859161376953,
+    "R5": 66.16712188720703,
+    "R10": 73.2515869140625,
+    "mAP": 55.649959564208984,
+    "mINP": 55.643760681152344
+  },
+  "margin_summary": {
+    "min": 0.0,
+    "median": 0.47342491149902344,
+    "max": 4.666383743286133
+  },
+  "min_caption_words": 6,
+  "base_scale": 20.214323043823242,
+  "delta_scale": 0.2476881742477417,
+  "results": [
+    {
+      "topk": 1000,
+      "delta_mult": -0.015,
+      "margin_quantile": 0.3,
+      "margin_threshold": 0.22002153098583221,
+      "min_caption_words": 6,
+      "applied_queries": 521,
+      "metrics": {
+        "R1": 46.866485595703125,
+        "R5": 66.21253204345703,
+        "R10": 73.2515869140625,
+        "mAP": 55.811458587646484,
+        "mINP": 55.805240631103516
+      }
+    }
+  ]
+}
