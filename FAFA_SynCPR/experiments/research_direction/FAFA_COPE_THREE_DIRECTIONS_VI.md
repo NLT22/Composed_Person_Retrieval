@@ -19,6 +19,8 @@ Phần này cố tình vẽ theo bố cục của hai hình trong paper:
 
 Đây là kiểu "FAFA làm backbone chính, CoPE làm nhánh uncertainty phụ". Hình này bám theo FAFA ở phần Q-Former/FDA, rồi gắn thêm phần uncertainty giống CoPE ở bên phải.
 
+![Sơ đồ A: CoPE đưa vào FAFA](mermaid_exports/01_cope_into_fafa_paper_like.png)
+
 ```mermaid
 flowchart LR
     subgraph IN["Inputs"]
@@ -100,6 +102,8 @@ flowchart LR
 ### Sơ đồ B: FAFA đưa vào CoPE
 
 Đây là hướng ngược lại: CoPE giữ vai trò global retrieval chính, còn FAFA bổ sung local fine-grained branch. Hình này bám theo CoPE ở phần `mu / sigma`, rồi thêm một nhánh token alignment giống FAFA.
+
+![Sơ đồ B: FAFA đưa vào CoPE](mermaid_exports/02_fafa_into_cope_paper_like.png)
 
 ```mermaid
 flowchart LR
@@ -192,6 +196,8 @@ flowchart LR
 ### Sơ đồ C: FAFA chạy trực tiếp trên FashionIQ
 
 Đây là baseline cần làm trước. Nó gần giống FAFA gốc nhất, chỉ thay dữ liệu person retrieval bằng FashionIQ.
+
+![Sơ đồ C: FAFA chạy trực tiếp trên FashionIQ](mermaid_exports/03_fafa_on_fashioniq_paper_like.png)
 
 ```mermaid
 flowchart LR
